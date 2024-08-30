@@ -24,4 +24,4 @@ Relacionar a situação-problema da organização com o impacto social esperado 
 
 ## Descrição do Parceiro
 
-Apresente uma descrição resumida sobre a organização onde o projeto será desenvolvido para que possa ser compreendido o cenário sistema sociotécnico.
+A organização onde o projeto será desenvolvido é na propria PUC Minas, especificamente no CRC (Centro de Recursos Computacionais), que é o setor responsavel por toda a rede acadêmica da instituição. Isso é, computadores e demais dispositivos voltados para as atividades acadêmicas da Graduação e Pós-Graduação da PUC Minas.

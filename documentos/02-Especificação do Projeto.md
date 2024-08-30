@@ -19,36 +19,73 @@ Colocar a imagem do modelo construído apresentando a proposta de solução.
 
 ## Requisitos
 
+As pessoas retratadas durante o processo de compreensão do problema são apresentadas nas figuras que seguem.
+
+### Lucas Arcanjo
+**Idade:** 22 anos<br>
+**Ocupação:** Auxiliar de TI<br>
+**Frustrações:** O programa é lento e pouco intuitivo.<br>
+**Motivação:** Facilitar o uso e diminuir a lentidão do aplicativo.<br>
+
+---
+
+### Heitor Flávio
+**Idade:** 23 anos<br>
+**Ocupação:** Auxilar de TI<br>
+**Frustrações:** A necessidade de reter documento do aluno para ceder empréstimo é pouco eficiente.<br>
+**Motivação:** O sistema efetuando a validação do usuário pelas credênciais de acesso de aluno/professor facilita o controle e segurança do setor e dos clientes.<br>
+
+---
+
+
+### Lucas Felipe
+**Idade:** 24 anos<br>
+**Ocupação:** Técnico <br>
+**Hobbies:** Robótica<br>
+**Frustrações:** Tive muita dificuldade quando entrei na empresa para aprender como funcionava o sistema. <br>
+**Motivação:** Ter um sistema mais leve e fácil manipulação.<br>
+
+---
+
+### Marcos
+**Idade:** 24 anos<br>
+**Ocupação:** Funcionário<br>
+**Hobbies:** Plantação<br>
+**Frustrações:** O sistema legado roda somente em um computador, pois o mesmo usa um banco de dados local, se este único computador der problema... putz.<br>
+**Motivação:** Permitir que o sistema rode em uma versão web para que todos possamos acessar em vários computadores.<br>
+
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+| ID     | Descrição do Requisito   | Prioridade |
+| ------ | ----------------------------------------- | ---- |
+| RF-001 | A aplicação deve ser distribuída, permitindo o acesso em vários computadores conectados à rede | ALTA | 
+| RF-002 | A aplicação deve permitir o empréstimo e devolução de equipamentos de informática   | ALTA |
+| RF-003 | A aplicação deve ser acessada apenas usuários técnicos/administrativos | ALTA | 
+| RF-004 | A aplicação deve ser pelo menos um usuário técnico/administrativo com papel de Administrador do sistema | ALTA | 
+| RF-005 | O empréstimo deve ser validado com a identidade acadêmica do aluno ou professor    | ALTA |
+| RF-006 | A devolução deve ser validada com a identificação do acadêmico do aluno ou professor | ALTA | 
+| RF-007 | A aplicação deve permitir o cadastro de novos itens    | ALTA |
+| RF-008 | A aplicação deve permitir a edição de itens | ALTA | 
+| RF-009 | A aplicação deve permitir a exclusão de itens   | ALTA |
+| RF-010 | A aplicação deve apresentar qual o código do usuário tomador | MÉDIA |
+| RF-011 | A aplicação deve apresentar qual o código do nome tomador | MÉDIA |
+| RF-012 | A aplicação deve registrar a data e hora do emprestimo | MÉDIA |
+| RF-013 | A aplicação deve registrar a data e hora da devolução | MÉDIA |
+| RF-014 | A aplicação deve apresentar a data e hora do emprestimo | MÉDIA |
+| RF-015 | A aplicação deve apresentar a data e hora da devolução | MÉDIA |
+| RF-016 | A aplicação deve apresentar em qual local foi colocado o equipamento    | BAIXA |
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+| ID      | Descrição do Requisito   | Prioridade |
+| ------- | ------------------------- | ---- |
+| RNF-001 | O sistema deve ser responsivo para rodar em dispositivos móveis | MÉDIA | 
+| RNF-002 | Deve processar requisições do usuário em no máximo 3s |   BAIXA | 
+| RNF-003 | A aplicação deve ser intuitiva |  BAIXA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
@@ -59,11 +96,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| Não pode ser desenvolvido um módulo de backend        |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 

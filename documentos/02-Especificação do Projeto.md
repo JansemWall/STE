@@ -24,7 +24,7 @@ A comunicação entre o front-end (Django) e o back-end (C#) será feita atravé
 
 Essa arquitetura modular garante escalabilidade, segurança e facilidade de manutenção, permitindo que cada camada seja desenvolvida, testada e escalada de forma independente.
 
-<center><img src="img/diagrama-arquitetura.png" alt="" width="350"/></center>
+<center><img src="img/diagrama-arquitetura.png" /></center>
 
 ## Project Model Canvas
 

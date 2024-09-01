@@ -12,7 +12,8 @@ Desenvolver um sistema de controle de empréstimo de itens.
 
 * André Felipe Gomes Pinto
 * Brendon Guimarães Antunes
-* Camila Larissa Gonçalves 
+* Camila Larissa Gonçalves
+* Fabricio Maia dos Santos
 * Jansem Wallemberg Torquetti Maia
 
 ## Orientador

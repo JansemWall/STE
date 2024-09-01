@@ -130,4 +130,31 @@ A referência abaixo irá auxiliá-lo na geração do artefato “Modelo ER”.
 
 ## Projeto da Base de Dados
 
-O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
+| **Autenticação de Usuario**                           |
+|-------------------------------------------------------|
+|<img src="img/db-auth.png" />                          |
+
+
+| **Categoria dos itens**                               |
+|-------------------------------------------------------|
+|<img src="img/db-categ.png" />                         |
+
+
+| **Item**                                              |
+|-------------------------------------------------------|
+|<img src="img/db-ite.png" />                           |
+
+
+| **Item Emprestado(Fluxo de itens)**                   |
+|-------------------------------------------------------|
+|<img src="img/db-itelen.png" />                        |
+
+
+| **Perfil Usuario (Administrador ou Usuario)**         |
+|-------------------------------------------------------|
+|<img src="img/db-perf.png" />                          |
+
+
+| **Usuario**                                           |
+|-------------------------------------------------------|
+|<img src="img/db-usr.png" />                           |

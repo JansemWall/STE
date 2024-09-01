@@ -1,10 +1,6 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
-
-![Arquitetura da Solução](img/02-mob-arch.png)
 
 ## Modelo ER
 
@@ -13,15 +9,11 @@ foi desenvolvido de maneira simplificada pelas limitações da versão gratuita 
 relações do sistema.
 
  *segue abaixo a imagem do diagrama desenvolvido no app Lucidchart*
- ![Diagrama ER](/docs/img/Diagrama-ER.png)
-
 
 ## Esquema Relacional
 
 O Esquema Relacional com a representação dos dados em tabelas juntamente com as restrições de integridade e chaves primárias.
 
-![Modelo esquema Relacional](/docs/img/Esquema-relacional.png)
- 
 ## Modelo Físico
 
 Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.

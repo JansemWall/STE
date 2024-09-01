@@ -10,8 +10,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-*André Felipe Gomes Pinto
-
+* André Felipe Gomes Pinto
 * Camila Larissa Gonçalves 
 * Jansem Wallemberg Torquetti Maia
 

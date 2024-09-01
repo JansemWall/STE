@@ -124,31 +124,48 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Projeto da Base de Dados
 
-| **Autenticação de Usuario**                           |
-|-------------------------------------------------------|
-|<img src="img/db-auth.png" />                          |
+### 1. Autenticação de Usuário
+<div style="text-align: center; margin-bottom: 30px;">
+  <img src="img/db-auth.png" alt="Esquema de Autenticação de Usuário" style="border: 1px solid #ddd; border-radius: 8px; padding: 10px; max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #666;">Figura 1: Esquema de Autenticação de Usuário</p>
+</div>
 
+---
 
-| **Categoria dos itens**                               |
-|-------------------------------------------------------|
-|<img src="img/db-categ.png" />                         |
+### 2. Categoria dos Itens
+<div style="text-align: center; margin-bottom: 30px;">
+  <img src="img/db-categ.png" alt="Esquema de Categoria dos Itens" style="border: 1px solid #ddd; border-radius: 8px; padding: 10px; max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #666;">Figura 2: Esquema de Categoria dos Itens</p>
+</div>
 
+---
 
-| **Item**                                              |
-|-------------------------------------------------------|
-|<img src="img/db-ite.png" />                           |
+### 3. Item
+<div style="text-align: center; margin-bottom: 30px;">
+  <img src="img/db-ite.png" alt="Esquema de Item" style="border: 1px solid #ddd; border-radius: 8px; padding: 10px; max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #666;">Figura 3: Esquema de Item</p>
+</div>
 
+---
 
-| **Item Emprestado(Fluxo de itens)**                   |
-|-------------------------------------------------------|
-|<img src="img/db-itelen.png" />                        |
+### 4. Item Emprestado (Fluxo de Itens)
+<div style="text-align: center; margin-bottom: 30px;">
+  <img src="img/db-itelen.png" alt="Esquema de Item Emprestado" style="border: 1px solid #ddd; border-radius: 8px; padding: 10px; max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #666;">Figura 4: Esquema de Item Emprestado (Fluxo de Itens)</p>
+</div>
 
+---
 
-| **Perfil Usuario (Administrador ou Usuario)**         |
-|-------------------------------------------------------|
-|<img src="img/db-perf.png" />                          |
+### 5. Perfil de Usuário (Administrador ou Usuário)
+<div style="text-align: center; margin-bottom: 30px;">
+  <img src="img/db-perf.png" alt="Esquema de Perfil de Usuário" style="border: 1px solid #ddd; border-radius: 8px; padding: 10px; max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #666;">Figura 5: Esquema de Perfil de Usuário</p>
+</div>
 
+---
 
-| **Usuario**                                           |
-|-------------------------------------------------------|
-|<img src="img/db-usr.png" />                           |
+### 6. Usuário
+<div style="text-align: center; margin-bottom: 30px;">
+  <img src="img/db-usr.png" alt="Esquema de Usuário" style="border: 1px solid #ddd; border-radius: 8px; padding: 10px; max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #666;">Figura 6: Esquema de Usuário</p>
+</div>

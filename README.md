@@ -1,16 +1,17 @@
-# TÍTULO DO PROJETO
+# STE
 
-`CURSO`
+`Analise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Eixo 5 - Projeto: Desenvolvimento de um Sistema Sociotécnico Inovador`
 
-`SEMESTRE`
+`Eixo 5`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Desenvolver um sistema de controle de empréstimo de itens.
 
 ## Integrantes
 
 * André Felipe Gomes Pinto
+* Brendon Guimarães Antunes
 * Camila Larissa Gonçalves 
 * Jansem Wallemberg Torquetti Maia
 

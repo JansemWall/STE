@@ -115,7 +115,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-![Diagrama de casos de uso](img/CasosdeUso.drawio.jpg)
+<center><img src="img/CasosDeUso.drawio.png" alt="" width="350"/></center>
 
 
 ## Modelo ER (Projeto Conceitual)

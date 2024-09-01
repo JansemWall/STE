@@ -30,8 +30,8 @@ Essa arquitetura modular garante escalabilidade, segurança e facilidade de manu
 
 Colocar a imagem do modelo construído apresentando a proposta de solução.
 
-> **Links Úteis**:
-> Disponíveis em material de apoio do projeto
+> **STE**:
+> [Disponíveis em material de apoio do projeto](https://app.projectcanvas.online/projects/66d4c049723c4af49d389625)
 
 ## Requisitos
 

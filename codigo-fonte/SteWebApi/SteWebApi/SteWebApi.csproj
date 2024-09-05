@@ -17,4 +17,20 @@
       <Folder Include="Controllers\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="Enums\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Enums\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Enums\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Enums\**" />
+    </ItemGroup>
+
 </Project>

@@ -1,0 +1,17 @@
+using MongoDB.Driver;
+using SteWebApi.Model;
+
+namespace SteWebApi;
+
+public class MongoDbContext
+{
+    private readonly IMongoDatabase _database;
+    public IMongoCollection<User> Users => _database.GetCollection<User>("Usuarios");
+
+    public MongoDbContext(IConfiguration configuration)
+    {
+        var connectionString = configuration.GetConnectionString("MongoDB");
+        var mongoClient = new MongoClient(connectionString);
+        _database = mongoClient.GetDatabase("CrcEmpresta");
+    }
+}

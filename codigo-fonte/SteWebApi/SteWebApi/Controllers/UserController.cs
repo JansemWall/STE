@@ -7,8 +7,6 @@ using SteWebApi.Services;
 
 namespace SteWebApi.Controllers;
 
-public class UserController
-{
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -33,19 +31,10 @@ public class UserController
             return Ok(jwt);
         }
         
+        [AllowAnonymous]
         [HttpPost("Create")]
         public async Task<ActionResult> Create(User user)
         {
-            var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var claims = tokenHandler.ReadJwtToken(token).Claims;
-            var perfilClaim = claims.FirstOrDefault(c => c.Type == "role");
-            Console.WriteLine(perfilClaim.ToString());
-            
-            if ( perfilClaim == null || perfilClaim.Value != "Administrador")
-            {
-                return Unauthorized("Apenas administradores têm permissão para criar usuários.");
-            }
             await _MongoDbContext.Users.InsertOneAsync(user);
             return Ok(user);
         }
@@ -56,8 +45,15 @@ public class UserController
             var user = await _MongoDbContext.Users.Find(i => i.Id == id).FirstOrDefaultAsync();
             if (user == null) return NotFound();
 
-            user.Name = newUser.Name;
-            user.Password = newUser.Password;
+            if (!string.IsNullOrWhiteSpace(newUser.Name))
+            {
+                user.Name = newUser.Name;
+            }
+            if (!string.IsNullOrWhiteSpace(newUser.Password))
+            {
+                user.Password = newUser.Password;
+            }
+            
             await _MongoDbContext.Users.ReplaceOneAsync(i => i.Id == id, user);
 
             return NoContent();
@@ -79,4 +75,3 @@ public class UserController
             return Ok(model);
         }
     }
-}

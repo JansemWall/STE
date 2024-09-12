@@ -44,13 +44,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | ID     | Descrição do Requisito   | Prioridade |
 | ------ | ----------------------------------------- | ---- |
 | RF-001 | A aplicação deve permitir o empréstimo e devolução de equipamentos de informática   | ALTA |
-| RF-002 | O empréstimo e devolução deve ser validado com a identidade acadêmica do aluno ou professor    | ALTA |
+| RF-002 | O empréstimo e devolução deve ser validado com a identidade acadêmica do aluno ou professor no Active Diretory   | ALTA |
 | RF-003 | A aplicação deve possuir CRUD de Categoria de Itens  | ALTA |
 | RF-004 | A aplicação deve possuir CRUD de Itens      | ALTA |
 | RF-005 | A aplicação deve apresentar qual o código do usuário e nome tomador | MÉDIA |
-| RF-006 | A aplicação deve registrar e apresentar a data e hora do emprestimo | MÉDIA |
-| RF-007 | A aplicação deve registrar e apresentar a data e hora da devolução | MÉDIA |
-| RF-008 | A aplicação deve registrar como observação o local foi colocado o equipamento    | BAIXA |
+| RF-006 | A aplicação deve registrar e apresentar a data e hora do emprestimo e devolução | MÉDIA |
+| RF-007 | A aplicação deve registrar como observação o local foi colocado o equipamento    | BAIXA |
 
 ### Requisitos não Funcionais
 

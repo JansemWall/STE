@@ -22,7 +22,7 @@ A necessidade de reformulação surge das fragilidades e deficiências do sistem
 
 ## Relação com a Extensão Universitária
 
-Relacionar a situação-problema da organização com o impacto social esperado com a implantação do sistema sociotécnico.
+Nosso cliente desempenha um papel fundamental na universidade, e, por isso, o gerenciamento dos bens da instituição necessita de um sistema de administração mais eficiente, que ofereça suporte adequado tanto para profissionais quanto para alunos. Nosso projeto visa solucionar as dificuldades enfrentadas pelos servidores no controle diário dos bens institucionais, tornando o processo mais ágil e confiável.
 
 ## Descrição do Parceiro
 

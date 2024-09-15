@@ -1,12 +1,8 @@
 # STE
 
-`Analise e Desenvolvimento de Sistemas`
+# Sobre
 
-`Eixo 5 - Projeto: Desenvolvimento de um Sistema Sociotécnico Inovador`
-
-`Eixo 5`
-
-Desenvolver um sistema de controle de empréstimo de itens.
+Esse projeto visa desenvolver um sistema que facilite o controle dos itens eletrônicos da puc - Minas Praça da liberdade do setor CRC (Centro de Recursos Computacionais)​  o projeto na prática  é essencial oferecer uma solução eficiente para que os funcionários consigam ter uma gestão dos produtos. E proporcionar aos alunos um processo de reserva eficiente 
 
 ## Integrantes
 

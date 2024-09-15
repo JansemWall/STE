@@ -22,7 +22,7 @@ A necessidade de reformulação surge das fragilidades e deficiências do sistem
 
 ## Relação com a Extensão Universitária
 
-Nosso cliente desempenha um papel fundamental na universidade, e, por isso, o gerenciamento dos bens da instituição necessita de um sistema de administração mais eficiente, que ofereça suporte adequado tanto para profissionais quanto para alunos. Nosso projeto visa solucionar as dificuldades enfrentadas pelos servidores no controle diário dos bens institucionais, tornando o processo mais ágil e confiável.
+Nosso cliente desempenha um papel fundamental na universidade, e, por isso, o gerenciamento dos bens da instituição necessita de um sistema de administração mais eficiente, que ofereça suporte adequado tanto para profissionais quanto para alunos. Nosso projeto visa solucionar as dificuldades enfrentadas pelos servidores no controle diário dos bens institucionais, tornando o processo mais ágil e confiável.  Ao implementar essa solução, a empresa não apenas melhora sua eficiência interna, mas também promove um ambiente de trabalho mais flexível e adaptável, o que contribui para o equilíbrio entre vida profissional e pessoal dos colaboradores. Isso está alinhado com o princípio da Extensão Universitária de atuar como agente transformador, promovendo a inclusão, o desenvolvimento social e a cidadania.
 
 ## Descrição do Parceiro
 

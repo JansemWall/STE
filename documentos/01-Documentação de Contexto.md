@@ -1,6 +1,6 @@
 # Introdução
 
-No contexto acadêmico e corporativo, o empréstimo de equipamentos é uma prática comum, mas muitas instituições enfrentam desafios na gestão eficiente desse processo. Na PUC Minas - Praça da Liberdade, o sistema atual de empréstimo é baseado em armazenamento local, o que restringe sua escalabilidade e acessibilidade.
+No contexto acadêmico e corporativo, o empréstimo de equipamentos é uma prática comum, mas muitas instituições enfrentam desafios na gestão eficiente desse processo. Na PUC Minas Lourdes, o sistema atual de empréstimo é baseado em armazenamento local, o que restringe sua escalabilidade e acessibilidade.
 
 Este projeto tem como objetivo superar essas limitações, implementando um sistema distribuído para o gerenciamento de empréstimo de equipamentos.
 
@@ -26,4 +26,4 @@ Nosso cliente desempenha um papel fundamental na universidade, e, por isso, o ge
 
 ## Descrição do Parceiro
 
-A organização onde o projeto será desenvolvido é na propria PUC Minas, especificamente no CRC (Centro de Recursos Computacionais), que é o setor responsavel por toda a rede acadêmica da instituição. Isso é, computadores e demais dispositivos voltados para as atividades acadêmicas da Graduação e Pós-Graduação da PUC Minas.
+A organização onde o projeto será desenvolvido é na PUC Minas Lourdes, especificamente no CRC (Centro de Recursos Computacionais), que é o setor responsavel por toda a rede acadêmica do <em>campus</em> Lourdes.

@@ -80,7 +80,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Modelo ER (Projeto Conceitual)
 
-<center><img src="img/modeloer.png" /></center>
+Será utilizado o banco de dados não relacional.
 
 ## Projeto da Base de Dados
 

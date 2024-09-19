@@ -84,6 +84,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Projeto da Base de Dados
 
+<center><img src="img/Diagrama Banco de Dados.png" /></center>
+
 ### Diagrama de Classes
 
 ![Diagrama de classe](https://github.com/user-attachments/assets/7c74ac2f-04f8-4319-b4d8-05a59b05fbad)

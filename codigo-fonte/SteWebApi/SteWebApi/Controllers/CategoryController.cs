@@ -38,7 +38,9 @@ public class CategoryController : ControllerBase
     [HttpDelete("Delete/{id}")]
     public async Task<ActionResult> Delete(string id)
     {
-        //add
+        await _MongoDbContext.Items.DeleteManyAsync(x => x.CategoryId == id);
+
+        
         var category = await _MongoDbContext.Category.FindOneAndDeleteAsync(x => x.Id == id);
         if (category == null) NotFound();
         return NoContent();
@@ -50,7 +52,9 @@ public class CategoryController : ControllerBase
         var category = await _MongoDbContext.Category.Find(c => c.Id == id).FirstOrDefaultAsync();
         if (category == null) return NotFound();
 
-        //add
+        var items = await _MongoDbContext.Items.Find(i => i.CategoryId == id).ToListAsync();
+        category.Items = items; 
+
         
         return Ok(category);
     }

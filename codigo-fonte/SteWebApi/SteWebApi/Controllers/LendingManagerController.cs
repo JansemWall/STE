@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using SteWebApi.Model;
+using System.Security.Claims;
 
 
 namespace SteWebApi.Controllers;
 
-[Authorize]
+//[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class LendingManagerController : ControllerBase
@@ -20,42 +21,31 @@ public class LendingManagerController : ControllerBase
     }
 
     [HttpPost("Lend/{id}")]
-    public async Task<ActionResult> LendForId(string id, [FromBody] LendingManager request)
+    public async Task<ActionResult> LendForId(string id, [FromBody] LendingManagerDto request)
     {
-     var item = await _context.Items.FindOneAndUpdateAsync(
-      Builders<Item>.Filter.Eq(i => i.Id, id),
-      Builders<Item>.Update
-          .Set(i => i.IsLend, true)
-          .Set(i => i.LendeeName, request.StudentName)
-          .Set(i => i.LendeeId, request.StudentId)
-     );
+        var item = await _context.Items
+            .FindOneAndUpdateAsync(
+                Builders<Item>.Filter.Eq(i => i.Id, id),
+                Builders<Item>.Update.Set(i => i.IsLend, true)
+            );
 
-     if (item == null) return NotFound();
+        if (item == null) return NotFound();
+        var userId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
 
-     var itemLending = new LendingManager()
-     {
-      Id   = item.Id,
-      CategoryId = item.CategoryId,
-      Name = item.Name,
-      Code = item.Code,
-      DateLend = DateTime.Now,
-      DateReturn = null,
-      StudentName = request.StudentName,
-      StudentId = request.StudentId
-     };
-     await _context.ItemLending.InsertOneAsync(itemLending);
      
      //History
-     var historyLending = new History()
+     var historyLending = new ItemTransactionHistory()
      {
          ItemId = item.Id,
+         UserId = userId,
          CategoryId = item.CategoryId,
-         Name = item.Name,
-         Code = item.Code,
+         ItemName = item.Name,
+         ItemCode = item.Code,
          DateLend = DateTime.Now,
          DateReturn = null,
-         StudentName = itemLending.StudentName,
-         StudentId = itemLending.StudentId
+         IsLend = true,
+         StudentName = request.StudentName,
+         StudentId = request.StudentId
      };
      
      await _context.HistoryLendItems.InsertOneAsync(historyLending);
@@ -66,16 +56,14 @@ public class LendingManagerController : ControllerBase
     [HttpPost("Return/{id}")]
     public async Task<ActionResult> ReturnItem(string id)
     {
-        var itemLending = await _context.Items.FindOneAndUpdateAsync(
-            Builders<Item>.Filter.Eq(i => i.Id, id),
-            Builders<Item>.Update.Set(i => i.IsLend, false)
-                      .Set(i => i.LendeeName, null)
-                      .Set(i => i.LendeeId, null)
-        );
-        if (itemLending == null) NotFound();
+        var item = await _context.Items
+       .Find(Builders<Item>.Filter.Eq(i => i.Id, id))
+       .FirstOrDefaultAsync();
+
+        if (item == null) NotFound();
         //History
-        var filter = Builders<History>.Filter.Eq(h => h.ItemId, id);
-        var sort = Builders<History> .Sort.Descending(h => h.DateLend);
+        var filter = Builders<ItemTransactionHistory>.Filter.Eq(h => h.ItemId, id);
+        var sort = Builders<ItemTransactionHistory> .Sort.Descending(h => h.DateLend);
         var latestHistory = await _context.HistoryLendItems.Find(filter).Sort(sort).FirstOrDefaultAsync();
 
         if (latestHistory == null)
@@ -83,11 +71,12 @@ public class LendingManagerController : ControllerBase
             return NotFound(); // Nenhum hist�rico encontrado para atualizar
         }
 
-        var update = Builders<History>.Update.Set(h => h.DateReturn, DateTime.Now);
+        var update = Builders<ItemTransactionHistory>.Update.Set(h => h.DateReturn, DateTime.Now)
+            .Set(h => h.IsLend, false);
 
 
         var updateResult = await _context.HistoryLendItems.UpdateOneAsync(
-     Builders<History>.Filter.Eq(h => h.Id, latestHistory.Id),
+     Builders<ItemTransactionHistory>.Filter.Eq(h => h.Id, latestHistory.Id),
      update
  );
 
@@ -95,7 +84,6 @@ public class LendingManagerController : ControllerBase
         {
             return NotFound(); 
         }
-        await _context.ItemLending.FindOneAndDeleteAsync(x => x.Id == id);
         return NoContent();
     }
 

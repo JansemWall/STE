@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Brend\\OneDrive\\Área de Trabalho\\SteWebApi\\SteWebApi\\SteWebApi.csproj": {}
+    "C:\\Users\\Brend\\OneDrive\\Documentos\\SteApi\\SteWebApi\\SteWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Brend\\OneDrive\\Área de Trabalho\\SteWebApi\\SteWebApi\\SteWebApi.csproj": {
+    "C:\\Users\\Brend\\OneDrive\\Documentos\\SteApi\\SteWebApi\\SteWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brend\\OneDrive\\Área de Trabalho\\SteWebApi\\SteWebApi\\SteWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Brend\\OneDrive\\Documentos\\SteApi\\SteWebApi\\SteWebApi.csproj",
         "projectName": "SteWebApi",
-        "projectPath": "C:\\Users\\Brend\\OneDrive\\Área de Trabalho\\SteWebApi\\SteWebApi\\SteWebApi.csproj",
+        "projectPath": "C:\\Users\\Brend\\OneDrive\\Documentos\\SteApi\\SteWebApi\\SteWebApi.csproj",
         "packagesPath": "C:\\Users\\Brend\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brend\\OneDrive\\Área de Trabalho\\SteWebApi\\SteWebApi\\obj\\",
+        "outputPath": "C:\\Users\\Brend\\OneDrive\\Documentos\\SteApi\\SteWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Brend\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.425\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -31,8 +31,9 @@ Essa arquitetura modular garante escalabilidade, segurança e facilidade de manu
 Colocar a imagem do modelo construído apresentando a proposta de solução.
 
 > **STE**:
-> [Model Canvas] ([https://app.projectcanvas.online/projects/66d4c049723c4af49d389625](https://app.projectcanvas.online/beta/public-project/ZJyi4UhMoFnIm4ME5rlB9JucBmTNTwfPS8jGVYWvbI=))
-> ![image](https://github.com/user-attachments/assets/8d1a24ab-e7bd-4264-b29a-8c76867a6557)
+> [Model Canvas]
+> ![image](https://github.com/user-attachments/assets/0fce7f08-a276-4532-a274-b04b6545b18f)
+
 
 
 ## Requisitos

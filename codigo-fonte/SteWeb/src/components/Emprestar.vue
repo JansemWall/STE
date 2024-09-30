@@ -27,16 +27,14 @@
                     </button>
                 </div>
             </div>
-
-            <div v-if="success" class="mt-4 text-green-500">Item emprestado com sucesso!</div>
-            <div v-if="error" class="mt-4 text-red-500">Erro ao emprestar o item.</div>
         </div>
     </div>
 </template>
 
 <script>
 import api from '@/services/api'
-
+import { toast } from 'vue3-toastify';
+    
 export default {
     name: 'Emprestar',
     data() {
@@ -84,6 +82,7 @@ export default {
                 headers: {
                     'Content-Type': 'application/json' // Define o cabeçalho Content-Type
                 }
+                toast.success('Item emprestado com sucesso!')
             })
             .then(() => {
                 this.success = true;
@@ -94,6 +93,7 @@ export default {
             })
             .catch(() => {
                 this.error = true
+                toast.success('Falha ao emprestar item!')
             })
         },
     },

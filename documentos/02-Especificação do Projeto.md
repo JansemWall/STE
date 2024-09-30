@@ -38,71 +38,29 @@ Colocar a imagem do modelo construído apresentando a proposta de solução.
 
 ## Requisitos
 
-As pessoas retratadas durante o processo de compreensão do problema são apresentadas nas figuras que seguem.
-
-### Lucas Arcanjo
-**Idade:** 22 anos<br>
-**Ocupação:** Auxiliar de TI<br>
-**Frustrações:** O programa é lento e pouco intuitivo.<br>
-**Motivação:** Facilitar o uso e diminuir a lentidão do aplicativo.<br>
-
----
-
-### Heitor Flávio
-**Idade:** 23 anos<br>
-**Ocupação:** Auxilar de TI<br>
-**Frustrações:** A necessidade de reter documento do aluno para ceder empréstimo é pouco eficiente.<br>
-**Motivação:** O sistema efetuando a validação do usuário pelas credênciais de acesso de aluno/professor facilita o controle e segurança do setor e dos clientes.<br>
-
----
-
-
-### Lucas Felipe
-**Idade:** 24 anos<br>
-**Ocupação:** Técnico <br>
-**Hobbies:** Robótica<br>
-**Frustrações:** Tive muita dificuldade quando entrei na empresa para aprender como funcionava o sistema. <br>
-**Motivação:** Ter um sistema mais leve e fácil manipulação.<br>
-
----
-
-### Marcos
-**Idade:** 24 anos<br>
-**Ocupação:** Funcionário<br>
-**Hobbies:** Plantação<br>
-**Frustrações:** O sistema legado roda somente em um computador, pois o mesmo usa um banco de dados local, se este único computador der problema... putz.<br>
-**Motivação:** Permitir que o sistema rode em uma versão web para que todos possamos acessar em vários computadores.<br>
-
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
 
 ### Requisitos Funcionais
 
 | ID     | Descrição do Requisito   | Prioridade |
 | ------ | ----------------------------------------- | ---- |
-| RF-001 | A aplicação deve ser distribuída, permitindo o acesso em vários computadores conectados à rede | ALTA | 
-| RF-002 | A aplicação deve permitir o empréstimo e devolução de equipamentos de informática   | ALTA |
-| RF-003 | A aplicação deve ser acessada apenas usuários técnicos/administrativos | ALTA | 
-| RF-004 | A aplicação deve ser pelo menos um usuário técnico/administrativo com papel de Administrador do sistema | ALTA | 
-| RF-005 | O empréstimo deve ser validado com a identidade acadêmica do aluno ou professor    | ALTA |
-| RF-006 | A devolução deve ser validada com a identificação do acadêmico do aluno ou professor | ALTA | 
-| RF-007 | A aplicação deve permitir o cadastro de novos itens    | ALTA |
-| RF-008 | A aplicação deve permitir a edição de itens | ALTA | 
-| RF-009 | A aplicação deve permitir a exclusão de itens   | ALTA |
-| RF-010 | A aplicação deve apresentar qual o código do usuário tomador | MÉDIA |
-| RF-011 | A aplicação deve apresentar qual o código do nome tomador | MÉDIA |
-| RF-012 | A aplicação deve registrar a data e hora do emprestimo | MÉDIA |
-| RF-013 | A aplicação deve registrar a data e hora da devolução | MÉDIA |
-| RF-014 | A aplicação deve apresentar a data e hora do emprestimo | MÉDIA |
-| RF-015 | A aplicação deve apresentar a data e hora da devolução | MÉDIA |
-| RF-016 | A aplicação deve apresentar em qual local foi colocado o equipamento    | BAIXA |
+| RF-001 | A aplicação deve permitir o empréstimo e devolução de equipamentos de informática   | ALTA |
+| RF-002 | O empréstimo e devolução deve ser validado com a identidade acadêmica do aluno ou professor no Active Diretory   | ALTA |
+| RF-003 | A aplicação deve possuir CRUD de Categoria de Itens  | ALTA |
+| RF-004 | A aplicação deve possuir CRUD de Itens      | ALTA |
+| RF-005 | A aplicação deve apresentar qual o código do usuário e nome tomador | MÉDIA |
+| RF-006 | A aplicação deve registrar e apresentar a data e hora do emprestimo e devolução | MÉDIA |
+| RF-007 | A aplicação deve registrar como observação o local foi colocado o equipamento    | BAIXA |
 
 ### Requisitos não Funcionais
 
 | ID      | Descrição do Requisito   | Prioridade |
 | ------- | ------------------------- | ---- |
-| RNF-001 | O sistema deve ser responsivo para rodar em dispositivos móveis | MÉDIA | 
-| RNF-002 | Deve processar requisições do usuário em no máximo 3s |   BAIXA | 
-| RNF-003 | A aplicação deve ser intuitiva |  BAIXA | 
+| RNF-001 | A aplicação deve ser distribuída, permitindo o acesso em vários computadores conectados à rede | ALTA | 
+| RNF-002 | A aplicação deve ser acessada apenas usuários técnicos/administrativos | ALTA | 
+| RNF-003 | O sistema deve ser responsivo para rodar em dispositivos móveis | MÉDIA | 
+| RNF-004 | Deve processar requisições do usuário em no máximo 3s |   BAIXA | 
+| RNF-005 | A aplicação deve ser intuitiva |  BAIXA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -118,14 +76,16 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-<center><img src="img/casosdeuso.png" /></center>
+<center><img src="img/Diagrama%20de%20Caso%20de%20Uso.png" /></center>
 
 
 ## Modelo ER (Projeto Conceitual)
 
-<center><img src="img/modeloer.png" /></center>
+Será utilizado o banco de dados não relacional.
 
 ## Projeto da Base de Dados
+
+<center><img src="img/Diagrama Banco de Dados.png" /></center>
 
 ### Diagrama de Classes
 

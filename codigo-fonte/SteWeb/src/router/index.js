@@ -4,7 +4,9 @@ import Login from '@/components/Login.vue';
 import Emprestar from '@/components/Emprestar.vue';
 import Devolver from '@/components/Devolver.vue';
 import Historico from '@/components/Historico.vue';
-import Cookies from 'js-cookie';  // Importação do Cookies para verificar o token
+import Cookies from 'js-cookie'; 
+import AdminView from '@/views/AdminView.vue';
+import CrudCategoria from '@/components/CrudCategoria.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +16,14 @@ const router = createRouter({
       name: 'login',
       component: Login
     },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: AdminView,
+      meta: {requiresAuth: true},
+      children: [
+      { path: '/categoria', component: CrudCategoria, name: 'categoria', meta: { requiresAuth: true } },
+  ]},
     {
       path: '/',
       component: HomeView,

@@ -1,22 +1,22 @@
 <template>
     <div class="card-container">
 
-    <RouterLink to="/emprestar">
+    <RouterLink to="/categoria">
     <div class="card">
       <img src="https://via.placeholder.com/80" alt="Imagem 1" class="card-image">
-      <h3>Emprestar</h3>
+      <h3>Categorias</h3>
     </div>
     </RouterLink>
     <RouterLink to="/devolver">
     <div class="card">
       <img src="https://via.placeholder.com/80" alt="Imagem 2" class="card-image">
-      <h3>Devolver</h3>
+      <h3>Items</h3>
     </div>
     </RouterLink>
     <RouterLink to="/historico">
     <div class="card">
       <img src="https://via.placeholder.com/80" alt="Imagem 3" class="card-image">
-      <h3>Histórico</h3>
+      <h3>Usuarios</h3>
     </div>
     </RouterLink>
 
@@ -28,7 +28,6 @@
  .card-container {
   display: flex; /* Usando flexbox */
   justify-content: center; /* Centraliza os cards horizontalmente */
-  flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se necessário */
   gap: 20px; /* Espaçamento entre os cards */
   padding: 20px; /* Espaçamento interno da container */
 }

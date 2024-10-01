@@ -3,12 +3,12 @@
     <div class="navbar">
         <div class="navbar-left">
             <!-- Logo e saudação -->
-            <img src="https://via.placeholder.com/40" alt="Logo">
-            <span>Olá User, Seja Bem Vindo(a)</span>
+            <RouterLink to="/"><img src="https://via.placeholder.com/40" alt="Logo"></RouterLink>
+            <span>Olá {{ unique_name }}, Seja Bem Vindo(a)</span>
         </div>
         <div class="navbar-right"> 
             <!-- Links e barra de busca -->
-            <a href="#">Perfil Administrativo</a>
+            <RouterLink to="/admin">Perfil Administrativo</RouterLink>
             <a href="#">Ajuda</a>
             <div class="search-bar">
                 <input type="text" placeholder="Ajuda">
@@ -22,13 +22,29 @@
     </div>
 </template>
 
-<script setup>
-// Importa a função de logout
-import { logout } from '@/services/auth';
+<script>
+import { logout, getAccessToken, decodeToken } from '@/services/auth';
 
-const handleLogout = () => {
-    // Chama a função de logout e redireciona o usuário
-    logout();
+export default {
+    name: 'Navbar',
+    data() {
+        return {
+            unique_name: '',
+        };
+    },
+    mounted() {
+        const token = getAccessToken();
+        if (token) {
+            const decodedToken = decodeToken(token);
+            this.unique_name = decodedToken.unique_name || 'Usuário';
+        }
+    },
+    methods: {
+        handleLogout() {
+            logout(); 
+            this.$router.push('/login'); 
+        }
+    }
 };
 </script>
 
@@ -112,39 +128,5 @@ body {
 .search-bar button img {
     width: 20px;
     height: 20px;
-}
-
-/* Estilos do modal (caso existam no mesmo componente) */
-.modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.modalContent {
-    margin-top: 20px;
 }
 </style>

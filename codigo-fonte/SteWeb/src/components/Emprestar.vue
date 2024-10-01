@@ -81,19 +81,23 @@ export default {
             api.post(`LendingManager/Lend/${this.selectItemId}`, requestData, {
                 headers: {
                     'Content-Type': 'application/json' // Define o cabeçalho Content-Type
+                   
                 }
-                toast.success('Item emprestado com sucesso!')
+                
+                
             })
             .then(() => {
                 this.success = true;
+                toast.success('Item emprestado com sucesso!')
                 // Limpa os campos após sucesso
                 this.studentName = '';
                 this.studentId = '';
                 this.selectItemId = '';
+                setTimeout(function(){window.location.reload()}, 900)
             })
             .catch(() => {
                 this.error = true
-                toast.success('Falha ao emprestar item!')
+                toast.error('Falha ao emprestar item!')
             })
         },
     },

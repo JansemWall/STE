@@ -1,9 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
 import Login from '@/components/Login.vue';
 import Emprestar from '@/components/Emprestar.vue';
 import Devolver from '@/components/Devolver.vue';
 import Historico from '@/components/Historico.vue';
+import Cookies from 'js-cookie';  // Importação do Cookies para verificar o token
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,14 +17,30 @@ const router = createRouter({
     {
       path: '/',
       component: HomeView,
-      meta: { },
+      meta: { requiresAuth: true },  // Adiciona a verificação de autenticação
       children: [
-          { path: '/emprestar', component: Emprestar, name: 'emprestar' },
-          { path: '/devolver', component: Devolver, name: 'devolver' },
-          { path: '/historico', component: Historico, name: 'historico' },
+        { path: '/emprestar', component: Emprestar, name: 'emprestar', meta: { requiresAuth: true } },
+        { path: '/devolver', component: Devolver, name: 'devolver', meta: { requiresAuth: true } },
+        { path: '/historico', component: Historico, name: 'historico', meta: { requiresAuth: true } },
       ]
-  },
+    }
   ]
-})
+});
 
-export default router
+// Navigation Guard para verificar autenticação
+router.beforeEach((to, from, next) => {
+  // Verifica se a rota requer autenticação
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    const token = Cookies.get('access_token'); // Verifica se o token está nos cookies
+    if (!token) {
+      // Se não houver token, redireciona para a página de login
+      next({ name: 'login' });
+    } else {
+      next(); // Se houver token, permite a navegação
+    }
+  } else {
+    next(); // Se a rota não requer autenticação, permite a navegação
+  }
+});
+
+export default router;

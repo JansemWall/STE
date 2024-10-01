@@ -16,9 +16,21 @@
                     <img src="https://via.placeholder.com/20" alt="Pesquisar">
                 </button>
             </div>
+            <!-- Botão de Logout -->
+            <a href="#" @click.prevent="handleLogout">Sair</a>
         </div>
     </div>
 </template>
+
+<script setup>
+// Importa a função de logout
+import { logout } from '@/services/auth';
+
+const handleLogout = () => {
+    // Chama a função de logout e redireciona o usuário
+    logout();
+};
+</script>
 
 <style scoped>
 body {

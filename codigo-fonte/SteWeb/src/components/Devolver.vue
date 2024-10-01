@@ -83,6 +83,7 @@ export default {
                     this.success = true
                     this.items = this.items.filter(item => item.id !== id) // Remove o item devolvido da lista
                     toast.success('Item devolvido com sucesso!')
+                    setTimeout(function(){window.location.reload()})
                 })
                 .catch(() => {
                     this.error = true

@@ -1,20 +1,18 @@
 <script setup>
-import Navbar from '../components/Navbar.vue'
-import { RouterLink, RouterView } from 'vue-router'
-import Footer from '../components/Footer.vue'
-import Cards from '../components/Cards.vue'
+import Navbar from '../components/Navbar.vue';
+import Footer from '../components/Footer.vue';
+import Cards from '../components/Cards.vue';
 </script>
+
 <template>
     <Navbar></Navbar>
     <div class="container">
-        
-            <Cards></Cards>
-        
+        <Cards></Cards>
         <RouterView />
     </div>
     <Footer></Footer>
-    
 </template>
+
 <style scoped>
 .container {
     justify-content: center;     /* Centraliza horizontalmente */

@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import 'vue3-toastify/dist/index.css';
 import { toast } from 'vue3-toastify';
+
 </script>
 
 <template>

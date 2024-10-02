@@ -4,7 +4,7 @@ import Login from '@/components/Login.vue';
 import Emprestar from '@/components/Emprestar.vue';
 import Devolver from '@/components/Devolver.vue';
 import Historico from '@/components/Historico.vue';
-import Cookies from 'js-cookie'; 
+import Cookies from 'js-cookie';
 import AdminView from '@/views/AdminView.vue';
 import CrudCategoria from '@/components/CrudCategoria.vue';
 
@@ -20,10 +20,11 @@ const router = createRouter({
       path: '/admin',
       name: 'admin',
       component: AdminView,
-      meta: {requiresAuth: true},
+      meta: { requiresAuth: true },
       children: [
-      { path: '/categoria', component: CrudCategoria, name: 'categoria', meta: { requiresAuth: true } },
-  ]},
+        { path: '/categoria', component: CrudCategoria, name: 'categoria', meta: { requiresAuth: true } },
+      ]
+    },
     {
       path: '/',
       component: HomeView,

@@ -9,13 +9,13 @@
 <style scoped>
   footer {
     background-color: #f0f0f0; /* Cor de fundo do rodapé */
-    padding: 90px; /* Espaçamento interno do rodapé */
+    padding: 2%; /* Espaçamento interno do rodapé */
     text-align: center; /* Alinhar texto ao centro */
     position: fixed; /* Fixar o rodapé na parte inferior da página */
     bottom: 0;
     left: 0; /* Alinhar à esquerda */
     width: 100%; /* Ocupa toda a largura */
-    height: 200px; /* Altura automática para ajuste */
+    height: fit-content; /* Altura automática para ajuste */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao rodapé */
   }
 

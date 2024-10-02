@@ -1,6 +1,5 @@
 <script setup>
 import Navbar from '../components/Navbar.vue';
-import Footer from '../components/Footer.vue';
 import Cards from '../components/Cards.vue';
 </script>
 
@@ -10,7 +9,6 @@ import Cards from '../components/Cards.vue';
         <Cards></Cards>
         <RouterView />
     </div>
-    <Footer></Footer>
 </template>
 
 <style scoped>

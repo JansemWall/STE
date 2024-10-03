@@ -3,7 +3,6 @@
         <div v-if="loading" class="flex justify-center items-center">
             <span>Carregando...</span>
         </div>
-        <div v-if="error" color="red" class="mb-4">Erro ao carregar lista.</div>
         <div v-else>
             <h2 class="text-2xl font-semibold pb-5">Empréstimo</h2>
             <!-- Seleção de Categoria -->
@@ -124,7 +123,11 @@ export default {
             };
 
             // Faz a requisição para emprestar o item selecionado
-            api.post(`LendingManager/Lend/${this.selectItemId}`)
+            api.post(`LendingManager/Lend/${this.selectItemId}`, requestData, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
                 .then(() => {
                     this.success = true;
                     toast.success('Item emprestado com sucesso!');

@@ -2,7 +2,7 @@
     <section class="vh-100 gradient-custom">
         <div>
             <div>
-                <div class="card bg-dark text-white login-box">
+                <div class="flex justify-center bg-dark text-white login-box">
                     <form class="flex justify-center p-5 text-center" @submit.prevent="handleLogin">
                         <div class="flex flex-column justify-center my-4">
                             <a href="/" class="flex flex-column justify-center w-full">
@@ -32,14 +32,14 @@
                                 <label>Senha</label>
                             </div>
                         </div>
-                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5"
+                        <!-- <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5"
                             type="submit">
                             Login
-                        </button>
+                        </button> -->
 
                         <div>
                             <p class="mb-0">
-                                <a href="/cadastro" class="text-white-50 fw-bold">Cadastro</a>
+                                <button type="submit" class="text-white-50 fw-bold"> Login</button>
                             </p>
                         </div>
                     </form>

@@ -64,6 +64,7 @@ h1 {
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
+  color:#000
 }
 
 /* Estilo para a mensagem de erro */

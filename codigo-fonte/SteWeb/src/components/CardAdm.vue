@@ -25,6 +25,7 @@
   </template>
   
   <style scoped>
+ 
  .card-container {
   display: flex; /* Usando flexbox */
   justify-content: center; /* Centraliza os cards horizontalmente */

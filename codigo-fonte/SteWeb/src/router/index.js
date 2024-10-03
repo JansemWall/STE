@@ -25,15 +25,7 @@ const router = createRouter({
       meta: { requiresAuth: true },
       children: [
         { path: '/categoria', component: CrudCategoria, name: 'categoria', meta: { requiresAuth: true } },
-      ]
-    },
-    {
-      path: '/admin',
-      name: 'admin',
-      component: AdminView,
-      meta: { requiresAuth: true },
-      children: [
-        { path: '/items', component: CrudItem, name: 'items', meta: { requiresAuth: true } },
+        { path: '/items', component: CrudItem, name: 'items', meta: { requiresAuth: true } }
       ]
     },
     {

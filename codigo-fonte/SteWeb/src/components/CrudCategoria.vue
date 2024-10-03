@@ -172,7 +172,10 @@ h1 {
   align-items: center;
 }
 
-.edit-button, .delete-button, .save-button, .cancel-button {
+.edit-button,
+.delete-button,
+.save-button,
+.cancel-button {
   margin-left: 10px;
   padding: 5px 10px;
   border: none;

@@ -30,7 +30,7 @@
                 <td class="py-1 px-4">{{ item.userId }}</td>
                 <td class="py-1 px-4">{{ new Date(item.dateLend).toLocaleDateString() }}</td>
                 <td class="py-1 px-4">
-                    <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+                    <button class="bg-blue-500 px-3 py-1 rounded hover:bg-blue-600"
                         @click="returnItem(item.itemId)">
                         Devolver
                     </button>

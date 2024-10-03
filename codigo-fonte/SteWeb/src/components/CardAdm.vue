@@ -7,7 +7,7 @@
       <h3>Categorias</h3>
     </div>
     </RouterLink>
-    <RouterLink to="/devolver">
+    <RouterLink to="/items">
     <div class="card">
       <img src="https://via.placeholder.com/80" alt="Imagem 2" class="card-image">
       <h3>Items</h3>

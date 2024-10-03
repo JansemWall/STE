@@ -39,7 +39,8 @@
   border-radius: 10px; /* Bordas arredondadas */
   padding: 20px; /* Espaçamento interno do card */
   text-align: center; /* Centraliza o texto dentro do card */
-  width: 150px; /* Largura fixa do card */
+  height: 200px;
+  width: 250px; /* Largura fixa do card */
 }
 
 .card-image {
@@ -47,5 +48,6 @@
   height: 80px; /* Altura da imagem */
   border-radius: 50%; /* Torna a imagem circular */
   margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+  align-self: center;
 }
   </style>

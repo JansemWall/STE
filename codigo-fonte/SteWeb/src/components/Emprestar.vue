@@ -6,7 +6,7 @@
         <div v-else>
             <h2 class="text-2xl font-semibold pb-5">Empréstimo</h2>
             <!-- Seleção de Categoria -->
-            <div class="card-container mb-4">
+            <div class="card-container mb-4" v-if="!selectedCategoryId">
                 <div v-for="category in categories" :key="category.id" class="card"
                     @click="selectCategory(category.id)">
                     <h3>{{ category.name }}</h3>
@@ -38,7 +38,7 @@
                         class="w-full p-2 border rounded" />
                 </div>
                 <div>
-                    <button @click="lendItem" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    <button @click="lendItem" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">
                         Emprestar
                     </button>
                 </div>
@@ -170,10 +170,14 @@ select {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    width: 150px;
+    height: 200px;
+    width: 250px; /* Largura fixa do card */
     cursor: pointer;
     transition: background-color 0.3s;
-    /* Efeito de transição */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card:hover {

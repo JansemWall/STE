@@ -13,25 +13,25 @@
                 Nenhum empréstimo encontrado.
             </p>
 
-            <table v-else highlightOnHover>
-                <thead>
-                    <tr>
-                        <th class="pb-2 pt-1">Item</th>
-                        <th class="pb-2 pt-1">Cod. Item</th>
-                        <th class="pb-2 pt-1">Aluno</th>
-                        <th class="pb-2 pt-1">Cod. de Pessoa</th>
-                        <th class="pb-2 pt-1">Data de Empréstimo</th>
-                        <th class="pb-2 pt-1">Data de Devolução</th>
+            <table v-else highlightOnHover class="bordinha">
+                <thead >
+                    <tr class="text-center border ">
+                        <th class="p-2 pt-1">Item</th>
+                        <th class="p-2 pt-1 border">Cod. Item</th>
+                        <th class="p-2 pt-1 border">Aluno</th>
+                        <th class="p-2 pt-1 border">Cod. de Pessoa</th>
+                        <th class="p-2 pt-1 border">Data de Empréstimo</th>
+                        <th class="p-2 pt-1">Data de Devolução</th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
-                    <tr v-for="history in historico" :key="history.id" class="hover:bg-gray-300">
-                        <td class="p-1">{{ history.itemName }}</td>
-                        <td class="p-1">{{ history.itemCode }}</td>
-                        <td class="p-1">{{ history.studentName }}</td>
-                        <td class="p-1">{{ history.studentId }}</td>
-                        <td class="p-1">{{ new Date(history.dateLend).toLocaleDateString() }}</td>
-                        <td class="p-1">{{ history.dateReturn ? new Date(history.dateReturn).toLocaleDateString() : 'Não devolvido'}}</td>
+                    <tr v-for="history in historico" :key="history.id" class="linhaTabela">
+                        <td class="p-1 border">{{ history.itemName }}</td>
+                        <td class="p-1 border">{{ history.itemCode }}</td>
+                        <td class="p-1 border">{{ history.studentName }}</td>
+                        <td class="p-1 border">{{ history.studentId }}</td>
+                        <td class="p-1 px-4 border">{{ new Date(history.dateLend).toLocaleDateString() }} {{ new Date(history.dateLend).toLocaleTimeString() }}</td>
+                        <td class="p-1 px-4 border">{{ history.dateReturn ? new Date(history.dateReturn).toLocaleDateString() + ' ' + new Date(history.dateReturn).toLocaleTimeString() : 'Não devolvido'}}</td>
                     </tr>
                 </tbody>
             </table>
@@ -72,5 +72,7 @@ export default {
 </script>
 
 <style scoped>
-
+.linhaTabela:hover {
+    background-color: #f4f4f4;
+}
 </style>

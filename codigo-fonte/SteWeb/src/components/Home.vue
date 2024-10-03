@@ -54,5 +54,6 @@
   height: 80px; /* Altura da imagem */
   border-radius: 50%; /* Torna a imagem circular */
   margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+  align-self: center;
 }
   </style>

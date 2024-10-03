@@ -27,7 +27,8 @@
   <style scoped>
  .card-container {
   display: flex; /* Usando flexbox */
-  justify-content: center; /* Centraliza os cards horizontalmente */
+  width: 100%;
+  justify-content: space-around; /* Centraliza os cards horizontalmente */
   flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se necessário */
   gap: 20px; /* Espaçamento entre os cards */
   padding: 20px; /* Espaçamento interno da container */
@@ -39,7 +40,13 @@
   border-radius: 10px; /* Bordas arredondadas */
   padding: 20px; /* Espaçamento interno do card */
   text-align: center; /* Centraliza o texto dentro do card */
-  width: 150px; /* Largura fixa do card */
+  height: 200px;
+  width: 250px; /* Largura fixa do card */
+}
+.card:hover {
+  background-color: #e4e4e4; /* Cor de fundo do card */
+  border: 2px solid #ddd; /* Borda do card */
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
 .card-image {

@@ -5,7 +5,7 @@
         </div>
 
         <div v-else>
-            <h1 class="text-2xl font-semibold pb-5">Histórico de Empréstimos</h1>
+            <h2 class="text-2xl font-semibold pb-5">Histórico de Empréstimos</h2>
 
             <div v-if="error" color="red" class="mb-4">Erro ao carregar histórico de empréstimos.</div>
 

@@ -1,11 +1,14 @@
 <template>
-    <h2 class="text-xl mb-4">Devolução de Itens</h2>
 
+<div class="flex flex-column">
+    <h2 class="text-xl mb-4">Devolução de Itens</h2>
     <div v-if="loading" class="flex justify-center items-center">
         <span>Carregando...</span>
     </div>
 
     <table v-else class="justify-items-center w-full">
+
+        <div v-if="error" color="red" class="mb-4">Erro ao carregar item para devolução.</div>
         <thead>
             <tr>
                 <th class="pb-2 px-4 pt-1">Cod. Item</th>
@@ -35,6 +38,7 @@
             </tr>
         </tbody>
     </table>
+</div>
 </template>
 
 <script>
@@ -62,35 +66,34 @@ export default {
     },
     methods: {
         fetchPendingItems() {
+            this.loading = true; // Define o loading como verdadeiro ao buscar os itens
             api.get('LendingManager/History')
                 .then(response => {
-                    // Filtra os itens que não têm `dateReturn`, indicando que estão pendentes
-                    this.items = response.data.filter(item => !item.dateReturn)
+                    this.items = response.data.filter(item => !item.dateReturn);
                 })
                 .catch(() => {
-                    this.error = true
+                    this.error = true;
                 })
                 .finally(() => {
-                    this.loading = false
-                })
+                    this.loading = false; // Define o loading como falso após a busca
+                });
         },
         returnItem(id) {
-            this.error = false
-            this.success = false
+            this.error = false;
+            this.success = false;
 
             api.post(`LendingManager/Return/${id}`)
                 .then(() => {
-                    this.success = true
-                    this.items = this.items.filter(item => item.id !== id) // Remove o item devolvido da lista
-                    toast.success('Item devolvido com sucesso!')
-                    setTimeout(function(){window.location.reload()})
+                    this.success = true;
+                    toast.success('Item devolvido com sucesso!');
+                    this.fetchPendingItems();
                 })
                 .catch(() => {
-                    this.error = true
-                    toast.error('Falha para devolver o item!')
-                })
+                    this.error = true;
+                    toast.error('Falha para devolver o item!');
+                });
         },
-    },
+    }
 }
 
 </script>

@@ -13,7 +13,7 @@
       <h3>Items</h3>
     </div>
     </RouterLink>
-    <RouterLink to="/historico">
+    <RouterLink to="/usuarios">
     <div class="card">
       <img src="https://via.placeholder.com/80" alt="Imagem 3" class="card-image">
       <h3>Usuarios</h3>

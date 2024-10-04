@@ -9,6 +9,7 @@ import AdminView from '@/views/AdminView.vue';
 import CrudCategoria from '@/components/CrudCategoria.vue';
 import Home from '@/components/Home.vue'
 import CrudItem from '@/components/CrudItem.vue';
+import CrudUsuarios from '@/components/CrudUsuarios.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,7 +26,8 @@ const router = createRouter({
       meta: { requiresAuth: true },
       children: [
         { path: '/categoria', component: CrudCategoria, name: 'categoria', meta: { requiresAuth: true } },
-        { path: '/items', component: CrudItem, name: 'items', meta: { requiresAuth: true } }
+        { path: '/items', component: CrudItem, name: 'items', meta: { requiresAuth: true } },
+        { path: '/usuarios', component: CrudUsuarios, name: 'usuarios', meta: { requiresAuth: true } }
       ]
     },
     {

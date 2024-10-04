@@ -470,7 +470,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/a9ab7dcb-f0dd-4eed-a5ef-bcc276aa1593)></td>
+    <td><img src="https://github.com/user-attachments/assets/a9ab7dcb-f0dd-4eed-a5ef-bcc276aa1593"></td>
     <td>29/09/2024</td>
     <td>Verificar se o item é criado corretamente com dados válidos.</td>
     <td>Criar item com dados válidos.</td>
@@ -491,7 +491,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/404d277a-6417-4f5f-97cd-27a8bb86ef28)></td>
+    <td><img src="https://github.com/user-attachments/assets/404d277a-6417-4f5f-97cd-27a8bb86ef28"></td>
     <td>29/09/2024</td>
     <td>Garantir que o sistema rejeita criação de categoria com dados inválidos.</td>
     <td>Criar categoria com nome vazio.</td>
@@ -512,7 +512,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/34cec53b-83e4-47ef-b006-95ef4e5eb63c)></td>
+    <td><img src="https://github.com/user-attachments/assets/34cec53b-83e4-47ef-b006-95ef4e5eb63c"></td>
     <td>29/09/2024</td>
     <td>Verificar se o sistema impede a criação de categorias duplicadas.</td>
     <td>Criar categoria com nome já existente.</td>
@@ -536,7 +536,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/45141def-c15d-4b91-8cd6-ef4fa60c0e43)></td>
+    <td><img src="https://github.com/user-attachments/assets/45141def-c15d-4b91-8cd6-ef4fa60c0e43"></td>
     <td>29/09/2024</td>
     <td>Verificar se os dados da categoria são atualizados corretamente.</td>
     <td>Editar categoria com nome válido.</td>
@@ -557,7 +557,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/f6a32b0f-2437-4d95-b796-110205a3001d)></td>
+    <td><src="https://github.com/user-attachments/assets/f6a32b0f-2437-4d95-b796-110205a3001d"></td>
     <td>29/09/2024</td>
     <td>Garantir que o sistema rejeita a edição de categoria inexistente.</td>
     <td>Tentar editar categoria com ID inválido.</td>
@@ -578,7 +578,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/b2732ac1-a573-42ec-89f2-4970c12d3a6f)></td>
+    <td><img src="https://github.com/user-attachments/assets/b2732ac1-a573-42ec-89f2-4970c12d3a6f"></td>
     <td>29/09/2024</td>
     <td>Garantir que o sistema rejeita dados inválidos na edição.</td>
     <td>Editar categoria com nome vazio.</td>
@@ -602,7 +602,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/618bdfc1-606e-4116-a8d0-9f09d161e5b6)></td>
+    <td><img src="https://github.com/user-attachments/assets/618bdfc1-606e-4116-a8d0-9f09d161e5b6"></td>
     <td>29/09/2024</td>
     <td>Verificar se a categoria é deletada corretamente.</td>
     <td>Deletar categoria existente.</td>
@@ -626,7 +626,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/f551f6eb-7b3d-4e21-9d81-aa6e79794392)></td>
+    <td><img src="https://github.com/user-attachments/assets/f551f6eb-7b3d-4e21-9d81-aa6e79794392"></td>
     <td>29/09/2024</td>
     <td>Verificar se todas as categorias são listadas corretamente.</td>
     <td>Listar categorias existentes.</td>
@@ -652,7 +652,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/c641bc7e-d3c7-4467-a791-4dd6f8ba40b6)></td>
+    <td><img src="https://github.com/user-attachments/assets/c641bc7e-d3c7-4467-a791-4dd6f8ba40b6"></td>
     <td>29/09/2024</td>
     <td>Verificar se o item é criado corretamente com dados válidos.</td>
     <td>Criar item com dados válidos.</td>
@@ -673,7 +673,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td>![image](https://github.com/user-attachments/assets/bec088c9-729f-4959-a954-2470d0d824c5)</td>
+    <td><img src="(https://github.com/user-attachments/assets/bec088c9-729f-4959-a954-2470d0d824c5".</td>
     <td>29/09/2024</td>
     <td>Garantir que o sistema rejeita criação de item com dados inválidos.</td>
     <td>Criar item com nome vazio ou categoria inexistente.</td>
@@ -697,7 +697,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/85036d06-88a0-4a55-82c0-2d6e6b70a3ae)></td>
+    <td><img src="https://github.com/user-attachments/assets/85036d06-88a0-4a55-82c0-2d6e6b70a3ae"></td>
     <td>29/09/2024</td>
     <td>Verificar se os dados do item são atualizados corretamente.</td>
     <td>Editar item com dados válidos.</td>
@@ -718,7 +718,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td>![image](https://github.com/user-attachments/assets/d12aa6b0-6c75-426e-b6e4-561227bd82ed)</td>
+    <td><img src="https://github.com/user-attachments/assets/d12aa6b0-6c75-426e-b6e4-561227bd82ed"></td>
     <td>29/09/2024</td>
     <td>Garantir que o sistema rejeita edição de item inexistente.</td>
     <td>Tentar editar item com ID inválido.</td>
@@ -742,7 +742,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td>![image](https://github.com/user-attachments/assets/52c05485-4511-4cf0-b7b2-e24f8255a6c3)</td>
+    <td><img src="https://github.com/user-attachments/assets/52c05485-4511-4cf0-b7b2-e24f8255a6c3"></td>
     <td></td>
     <td>Verificar se o item é deletado corretamente.</td>
     <td>Deletar item existente.</td>
@@ -766,7 +766,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td>![image](https://github.com/user-attachments/assets/be96ae29-324e-4981-bb09-5bc470fbd2e8)</td>
+    <td><img src="https://github.com/user-attachments/assets/be96ae29-324e-4981-bb09-5bc470fbd2e8"></td>
     <td>29/09/2024</td>
     <td>Verificar se todos os itens são listados corretamente.</td>
     <td>Listar itens existentes.</td>
@@ -792,7 +792,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td>![image](https://github.com/user-attachments/assets/0edae4d2-6671-4ccb-ba06-cca0dc8e0130)</td>
+    <td><img src="https://github.com/user-attachments/assets/0edae4d2-6671-4ccb-ba06-cca0dc8e0130"></td>
     <td>29/09/2024</td>
     <td>Verificar se o item é emprestado corretamente.</td>
     <td>Emprestar item disponível.</td>
@@ -813,7 +813,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td>![image](https://github.com/user-attachments/assets/a9bd6153-41ef-4058-b759-d1cd59615698)</td>
+    <td><img src="https://github.com/user-attachments/assets/a9bd6153-41ef-4058-b759-d1cd59615698"></td>
     <td>29/09/2024</td>
     <td>Garantir que o sistema rejeita empréstimo de item inexistente.</td>
     <td>Tentar emprestar item com ID inválido.</td>
@@ -858,7 +858,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/1c938017-4831-4ce5-b95f-27d9c6a3359f)></td>
+    <td><img src="https://github.com/user-attachments/assets/1c938017-4831-4ce5-b95f-27d9c6a3359f"></td>
     <td></td>
     <td>Garantir que o sistema rejeita devolução de item que não foi emprestado.</td>
     <td>Tentar devolver item não emprestado.</td>
@@ -882,7 +882,7 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
     <th>Resultado do Teste</th>
   </tr>
   <tr>
-    <td><![image](https://github.com/user-attachments/assets/fda32da2-ee4e-4202-bec5-51a6fcab65d1)></td>
+    <td><img src="https://github.com/user-attachments/assets/fda32da2-ee4e-4202-bec5-51a6fcab65d1"></td>
     <td>29/09/2024</td>
     <td>Verificar se o histórico de empréstimos e devoluções é exibido corretamente.</td>
     <td>Listar histórico de empréstimos e devoluções.</td>

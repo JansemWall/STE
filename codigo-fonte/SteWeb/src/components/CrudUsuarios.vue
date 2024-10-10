@@ -61,7 +61,7 @@
     methods: {
       fetchUsers() {
         this.loading = true;
-        api.get('User/GetAllUsers') // Rota para obter todos os usuários
+        api.get('User/GetAllUsers') 
           .then(response => {
             this.users = response.data.map(user => ({
               ...user,
@@ -80,12 +80,12 @@
             name: this.newUserName,
             password: this.newUserPassword,
           };
-          api.post('User/Create', newUser) // Rota para criar o usuário
+          api.post('User/Create', newUser) 
             .then(response => {
               this.users.push({
                 id: response.data.id,
                 name: response.data.name,
-                password: '', // A senha não será exibida na lista
+                password: '', 
                 isEditing: false,
               });
               toast.success('Usuario criado com sucesso.')
@@ -105,20 +105,20 @@
         user.isEditing = true;
       },
       saveUser(user) {
-        api.put(`User/Edit/${user.id}`, { name: user.name, password: user.password }) // Rota para editar o usuário
+        api.put(`User/Edit/${user.id}`, { name: user.name, password: user.password }) 
           .then(() => {
             user.isEditing = false;
           })
           .catch(() => {
-            toast.error('Erro ao salvar usuario.')
+            toast.error('Erro ao salvar usuario. A senha deve ter no minimo 8 caracteres.')
           });
       },
       cancelEdit(user) {
-        this.fetchUsers(); // Atualiza os dados dos usuários ao cancelar a edição
+        this.fetchUsers(); 
       },
       deleteUser(userId) {
         if (confirm('Tem certeza que deseja deletar este usuário?')) {
-          api.delete(`User/Delete/${userId}`) // Rota para deletar o usuário
+          api.delete(`User/Delete/${userId}`) 
             .then(() => {
               this.users = this.users.filter(user => user.id !== userId);
             })
@@ -129,7 +129,7 @@
       },
     },
     mounted() {
-      this.fetchUsers(); // Chama a função para buscar os usuários ao carregar o componente
+      this.fetchUsers(); 
     },
   };
   </script>

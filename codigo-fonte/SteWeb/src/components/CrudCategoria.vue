@@ -93,7 +93,7 @@ export default {
       category.isEditing = true;
     },
     saveCategory(category) {
-      api.put(`Category/Update/${category.id}`, { name: category.name })
+      api.put(`Category/Edit/${category.id}`, { name: category.name })
         .then(() => {
           category.isEditing = false;
         })

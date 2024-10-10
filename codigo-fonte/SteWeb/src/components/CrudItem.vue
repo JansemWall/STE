@@ -11,12 +11,11 @@
       <button @click="showCreateInput = !showCreateInput" class="create-button">
         {{ showCreateInput ? 'Cancelar' : 'Adicionar Item' }}
       </button>
-      <!-- Input para adicionar item com seleção de categoria -->
+      <!-- Input para adicionar item -->
       <div v-if="showCreateInput" class="create-input">
         <input v-model="newItemName" placeholder="Nome do novo item" />
-        <input v-model="newItemCode" placeholder="Código do item" />
-        <select v-model="selectedCategoryId">
-          <option disabled value="">Selecione uma categoria</option>
+        <input v-model="newItemCode" placeholder="Código do novo item" />
+        <select v-model="newItemCategory" class="category-select">
           <option v-for="category in categories" :key="category.id" :value="category.id">
             {{ category.name }}
           </option>
@@ -29,12 +28,18 @@
     <ul class="item-list">
       <li v-for="item in items" :key="item.id">
         <div v-if="item.isEditing">
-          <input v-model="item.name" type="text" />
+          <input v-model="item.name" type="text" placeholder="Nome" />
+          <input v-model="item.code" type="text" placeholder="Código" />
+          <select v-model="item.categoryId" class="category-select">
+            <option v-for="category in categories" :key="category.id" :value="category.id">
+              {{ category.name }}
+            </option>
+          </select>
           <button @click="saveItem(item)" class="save-button">Salvar</button>
           <button @click="cancelEdit(item)" class="cancel-button">Cancelar</button>
         </div>
         <div v-else>
-          {{ item.name || 'Item sem Nome' }} ({{ item.categoryName }})
+          {{ item.name || 'Item sem Nome' }} - Código: {{ item.code }} - Categoria: {{ getCategoryName(item.categoryId) }}
           <button @click="editItem(item)" class="edit-button">Editar</button>
           <button @click="deleteItem(item.id)" class="delete-button">Deletar</button>
         </div>
@@ -55,10 +60,10 @@ export default {
   data() {
     return {
       items: [],
-      categories: [], // Armazena as categorias
+      categories: [],
       newItemName: '',
       newItemCode: '',
-      selectedCategoryId: '', // Armazena o ID da categoria selecionada
+      newItemCategory: '',
       showCreateInput: false,
       error: false,
       loading: true,
@@ -86,46 +91,47 @@ export default {
           this.categories = response.data;
         })
         .catch(() => {
-          alert('Erro ao carregar categorias');
+          this.error = true;
         });
     },
     createItem() {
-      if (this.newItemName.trim() && this.selectedCategoryId) {
+      if (this.newItemName.trim() && this.newItemCode.trim() && this.newItemCategory) {
         const newItem = {
           name: this.newItemName,
           code: this.newItemCode,
-          categoryId: this.selectedCategoryId,
+          categoryId: this.newItemCategory,
         };
-        api.post('Item/Create', newItem) // Chamada para criar o item com a categoria selecionada
+        api.post('Item/Create', newItem)
           .then(response => {
             this.items.push({
               id: response.data.id,
               name: response.data.name,
+              code: response.data.code,
               categoryId: response.data.categoryId,
-              categoryName: this.getCategoryNameById(response.data.categoryId),
               isEditing: false,
             });
             this.newItemName = '';
             this.newItemCode = '';
-            this.selectedCategoryId = '';
+            this.newItemCategory = '';
             this.showCreateInput = false;
           })
           .catch(() => {
             alert('Erro ao criar o item');
           });
       } else {
-        alert('O nome do item e a categoria são obrigatórios');
+        alert('Todos os campos são obrigatórios');
       }
-    },
-    getCategoryNameById(categoryId) {
-      const category = this.categories.find(c => c.id === categoryId);
-      return category ? category.name : 'Categoria Desconhecida';
     },
     editItem(item) {
       item.isEditing = true;
     },
     saveItem(item) {
-      api.put(`Item/Edit/${item.id}`, { name: item.name })
+      const updatedItem = {
+        name: item.name,
+        code: item.code,
+        categoryId: item.categoryId,
+      };
+      api.put(`Item/Edit/${item.id}`, updatedItem)
         .then(() => {
           item.isEditing = false;
         })
@@ -134,7 +140,7 @@ export default {
         });
     },
     cancelEdit(item) {
-      this.fetchItems();
+      this.fetchItems(); // Recarrega os dados se cancelar a edição
     },
     deleteItem(itemId) {
       if (confirm('Tem certeza que deseja deletar este item?')) {
@@ -147,16 +153,20 @@ export default {
           });
       }
     },
+    getCategoryName(categoryId) {
+      const category = this.categories.find(cat => cat.id === categoryId);
+      return category ? category.name : 'Categoria não encontrada';
+    },
   },
   mounted() {
-    this.fetchItems(); // Busca os itens ao carregar o componente
-    this.fetchCategories(); // Busca as categorias para a lista de seleção
+    this.fetchItems();
+    this.fetchCategories();
   },
 };
 </script>
 
 <style scoped>
-/* Estilos para a lista de itens */
+/* Estilos para o layout e funcionalidades */
 h1 {
   text-align: center;
   color: #1d5773;
@@ -182,17 +192,11 @@ h1 {
   justify-content: center;
 }
 
-.create-input input {
+.create-input input, .category-select {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-right: 10px;
-}
-
-.create-input select {
-  margin-left: 10px;
-  padding: 5px;
-  border-radius: 5px;
 }
 
 .item-list {
@@ -239,7 +243,6 @@ h1 {
   color: black;
 }
 
-/* Estilo para a mensagem de erro */
 .error-message {
   color: red;
   text-align: center;

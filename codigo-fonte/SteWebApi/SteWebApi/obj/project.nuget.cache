@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TL7zY1XKB8CGvxPtAJZOWkHujPz78OnIZAaQFdfVnOE6+eC8WpaU01l1oeeEPGAzqhsGi9HRp/QbcPiYUiOf3Q==",
+  "dgSpecHash": "c/bROY8rajo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\brendon.antunes\\Desktop\\SteApi\\SteWebApi\\SteWebApi.csproj",
+  "projectFilePath": "C:\\Users\\brendon.antunes\\Desktop\\SteWebApi\\SteWebApi\\SteWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brendon.antunes\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\brendon.antunes\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

@@ -1,19 +1,13 @@
 <template>
-    <section class="vh-100 gradient-custom">
-
-        <div class=" login-box">
-
-            <div class=" flex flex-column justify-center my-4">
-                <a href="/" class="centralizar">
-                    <img :src="logo" alt="Sistema de Empréstimo" class="h-10 flex justify-center">
-                    <h2 class="m-2 text-center">STE</h2>
+    <section class="vh-100 gradient-custom d-flex align-items-center justify-content-center">
+        <div class="login-box">
+            <div class="text-center my-4">
+                <a href="/">
+                    <img :src="logo" alt="Sistema de Empréstimo" class="logo-img">
                 </a>
             </div>
-            <!-- <p class="text-white-50 mb-5">
-                                Insira seu usuário e senha!
-                            </p> -->
-            <form class="flex justify-center p-2 text-center" @submit.prevent="handleLogin">
-                <div data-mdb-input-init class="form-outline form-white mb-4 ">
+            <form class="p-2 text-center" @submit.prevent="handleLogin">
+                <div data-mdb-input-init class="form-outline form-white mb-4">
                     <div class="user-box">
                         <input id="typeEmailX" v-model="name" type="text" required class="form-control form-control-lg">
                         <label>Usuário</label>
@@ -21,20 +15,17 @@
                 </div>
                 <div data-mdb-input-init class="form-outline form-white mb-4">
                     <div class="user-box">
-                        <input id="typePasswordX" v-model="password" type="password" required
-                            class="form-control form-control-lg">
+                        <input id="typePasswordX" v-model="password" type="password" required class="form-control form-control-lg">
                         <label>Senha</label>
                     </div>
                 </div>
-                <!-- <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5"
-                            type="submit">
-                            Login
-                        </button> -->
-
                 <div>
-                    <p class="mb-0">
-                        <button type="submit" class="btn btn-outline-dark btn-lg px-5 fw-bold">Login</button>
-                    </p>
+                    <button type="submit" class="btn btn-outline-dark btn-lg px-5 fw-bold" :disabled="isLoading">
+                        <span v-if="!isLoading">Login</span>
+                        <span v-else>
+                            <img src="@/assets/loading.svg" alt="Loading..." class="loading-icon">
+                        </span>
+                    </button>
                 </div>
             </form>
         </div>
@@ -45,16 +36,19 @@
 import { login } from '@/services/auth';
 import { toast } from 'vue3-toastify';
 import logo from '@/assets/logo.svg';
+
 export default {
     data() {
         return {
             name: '',
             password: '',
+            isLoading: false,
             logo
         }
     },
     methods: {
         async handleLogin() {
+            this.isLoading = true;
             try {
                 await login(this.name, this.password);
                 toast.success('Login com sucesso!', { autoClose: 1000 });
@@ -62,6 +56,8 @@ export default {
             } catch (error) {
                 toast.error('Usuário ou senha inválido!', { autoClose: 1000 });
                 console.error('Erro ao fazer login', error);
+            } finally {
+                this.isLoading = false;
             }
         }
     }
@@ -69,7 +65,13 @@ export default {
 </script>
 
 <style scoped>
-html {
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.vh-100 {
     height: 100vh;
 }
 
@@ -80,83 +82,66 @@ html {
     text-decoration: none;
 }
 
-.centralizar a {
-    text-decoration: none;
-    text-decoration-style: none;
-}
-
-.centralizar img {
-    align-self: center;
+.logo-img {
+    width: 300px;
+    height: auto;
 }
 
 .login-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 400px;
-    height: fit-content;
-    transform: translate(-50%, -50%);
+    padding: 20px;
     background: #fff;
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-}
-
-.login-box h2 {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #000;
     text-align: center;
 }
 
-.login-box .user-box {
+.user-box {
     position: relative;
+    margin-bottom: 30px;
 }
 
-.login-box .user-box input {
+.user-box input {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
     color: #000;
-    margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #000;
     outline: none;
     background: transparent;
-    text-decoration-style: none;
 }
 
-.login-box .user-box label {
+.user-box label {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 0;
-    padding: 10px 0;
     font-size: 16px;
     color: #000;
     pointer-events: none;
-    transition: .5s;
+    transition: 0.5s;
 }
 
-.login-box .user-box input:focus~label,
-.login-box .user-box input:valid~label {
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
     top: -20px;
-    left: 0;
-    color: #004062;
     font-size: 12px;
+    color: #004062;
 }
 
-.login-box form a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #004062;
-    font-size: 14px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 20px;
-    letter-spacing: 4px;
-    text-align: center;
+.btn[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.loading-icon {
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 </style>

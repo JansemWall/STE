@@ -6,12 +6,12 @@
 
     <h1>Lista de Itens</h1>
 
-    <!-- Botão para adicionar novo item -->
+
     <div class="create-item">
       <button @click="showCreateInput = !showCreateInput" class="create-button">
         {{ showCreateInput ? 'Cancelar' : 'Adicionar Item' }}
       </button>
-      <!-- Input para adicionar item -->
+  
       <div v-if="showCreateInput" class="create-input">
         <input v-model="newItemName" placeholder="Nome do novo item" />
         <input v-model="newItemCode" placeholder="Código do novo item" />
@@ -24,8 +24,8 @@
       </div>
     </div>
 
-    <!-- Lista de Itens -->
-    <ul class="item-list">
+
+    <transition-group name="list" tag="ul" class="item-list">
       <li v-for="item in items" :key="item.id">
         <div v-if="item.isEditing">
           <input v-model="item.name" type="text" placeholder="Nome" />
@@ -44,9 +44,8 @@
           <button @click="deleteItem(item.id)" class="delete-button">Deletar</button>
         </div>
       </li>
-    </ul>
+    </transition-group>
 
-    <!-- Mensagem de erro -->
     <div v-if="error" class="error-message">
       Ocorreu um erro ao buscar os itens. Tente novamente mais tarde.
     </div>
@@ -140,7 +139,7 @@ export default {
         });
     },
     cancelEdit(item) {
-      this.fetchItems(); // Recarrega os dados se cancelar a edição
+      this.fetchItems(); 
     },
     deleteItem(itemId) {
       if (confirm('Tem certeza que deseja deletar este item?')) {
@@ -166,7 +165,39 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos para o layout e funcionalidades */
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.item-list li {
+  background-color: #f4f4f4;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+/* Transições de entrada e saída */
+.list-enter-active, .list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.list-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
 h1 {
   text-align: center;
   color: #1d5773;
@@ -197,22 +228,6 @@ h1 {
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-right: 10px;
-}
-
-.item-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.item-list li {
-  background-color: #f4f4f4;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .edit-button, .delete-button, .save-button, .cancel-button {

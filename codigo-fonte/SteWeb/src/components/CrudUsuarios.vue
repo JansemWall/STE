@@ -61,7 +61,7 @@
     methods: {
       fetchUsers() {
         this.loading = true;
-        api.get('User/GetAllUsers') 
+        api.get('user') 
           .then(response => {
             this.users = response.data.map(user => ({
               ...user,
@@ -80,7 +80,7 @@
             name: this.newUserName,
             password: this.newUserPassword,
           };
-          api.post('User/Create', newUser) 
+          api.post('user', newUser) 
             .then(response => {
               this.users.push({
                 id: response.data.id,
@@ -105,7 +105,7 @@
         user.isEditing = true;
       },
       saveUser(user) {
-        api.put(`User/Edit/${user.id}`, { name: user.name, password: user.password }) 
+        api.put(`user/${user.id}`, { name: user.name, password: user.password }) 
           .then(() => {
             user.isEditing = false;
           })
@@ -118,7 +118,7 @@
       },
       deleteUser(userId) {
         if (confirm('Tem certeza que deseja deletar este usuário?')) {
-          api.delete(`User/Delete/${userId}`) 
+          api.delete(`user/${userId}`) 
             .then(() => {
               this.users = this.users.filter(user => user.id !== userId);
             })

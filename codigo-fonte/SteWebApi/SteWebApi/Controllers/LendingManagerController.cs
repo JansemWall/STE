@@ -9,7 +9,7 @@ using System.Security.Claims;
 namespace SteWebApi.Controllers;
 
 [Authorize]
-[Route("api/[controller]")]
+[Route("api/lendingmanager")]
 [ApiController]
 public class LendingManagerController : ControllerBase
 {
@@ -20,7 +20,7 @@ public class LendingManagerController : ControllerBase
         _context = context;
     }
 
-    [HttpPost("Lend/{id}")]
+    [HttpPost("lend/{id}")]
     public async Task<ActionResult> LendForId(string id, [FromBody] LendingManagerDto request)
     {
         var item = await _context.Items
@@ -53,7 +53,7 @@ public class LendingManagerController : ControllerBase
      return NoContent();
     }
     
-    [HttpPost("Return/{id}")]
+    [HttpPost("return/{id}")]
     public async Task<ActionResult> ReturnItem(string id)
     {
         var item = await _context.Items
@@ -89,7 +89,7 @@ public class LendingManagerController : ControllerBase
     }
 
 
-    [HttpGet("History")]
+    [HttpGet()]
     public async Task<ActionResult> GetHistory()
     {
         var items = await _context.HistoryLendItems.Find(_ => true).ToListAsync();

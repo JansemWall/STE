@@ -106,7 +106,7 @@ export default {
     },
     deleteCategory(categoryId) {
       if (confirm('Tem certeza que deseja deletar esta categoria?')) {
-        api.delete(`Category/Delete/${categoryId}`)
+        api.delete(`category/${categoryId}`)
           .then(() => {
             this.categories = this.categories.filter(category => category.id !== categoryId);
           })

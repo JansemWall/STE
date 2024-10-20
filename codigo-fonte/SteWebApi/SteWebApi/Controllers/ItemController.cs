@@ -7,7 +7,7 @@ using SteWebApi.DtoModels;
 namespace SteWebApi.Controllers;
 
 [Authorize]
-[Route("api/[controller]")]
+[Route("api/item")]
 [ApiController]
 
 public class ItemController : ControllerBase
@@ -19,7 +19,7 @@ public class ItemController : ControllerBase
         _MongoDbContext = context;
     }
     
-    [HttpPost("Create")]
+    [HttpPost()]
     public async Task<IActionResult> CreateItemAndLinkToCategory([FromBody]ItemDto model)
     {
         var existingItem = await _MongoDbContext.Items
@@ -50,7 +50,7 @@ public class ItemController : ControllerBase
         return Ok(item);
     }
     
-    [HttpPut("Edit/{id}")]
+    [HttpPut("{id}")]
     public async Task<ActionResult> UpdateItemName(string id, [FromBody] ItemDto newItem)
     {
         var item = await _MongoDbContext.Items.Find(i => i.Id == id).FirstOrDefaultAsync();
@@ -64,7 +64,7 @@ public class ItemController : ControllerBase
         return NoContent();
     }
     
-    [HttpDelete("Delete/{id}")]
+    [HttpDelete("{id}")]
     public async Task<ActionResult> Delete(string id)
     {
         var item = await _MongoDbContext.Items.FindOneAndDeleteAsync(x => x.Id == id);
@@ -88,7 +88,7 @@ public class ItemController : ControllerBase
     }
 
 
-    [HttpGet("Get/{id}")]
+    [HttpGet("{id}")]
     public async Task<ActionResult> GetById(string id)
     {
         var items = await _MongoDbContext.Items.Find(i => i.Id == id).FirstOrDefaultAsync();
@@ -96,7 +96,7 @@ public class ItemController : ControllerBase
         return Ok(items);
     }
     
-    [HttpGet("GetAll")]
+    [HttpGet()]
     public async Task<ActionResult> GetAll()
     {
         var model = await _MongoDbContext.Items.Find(_ => true).ToListAsync();

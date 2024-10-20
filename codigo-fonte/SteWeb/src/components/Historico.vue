@@ -94,7 +94,7 @@ export default {
     },
     methods: {
         getHistorico() {
-            api.get('LendingManager/History')
+            api.get('lendingmanager')
                 .then(response => {
                     this.historico = response.data;
                     this.historicoFiltrado = this.historico; 

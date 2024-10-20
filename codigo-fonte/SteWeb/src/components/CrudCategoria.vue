@@ -57,7 +57,7 @@ export default {
   methods: {
     fetchCategories() {
       this.loading = true;
-      api.get('Category/GetAll')
+      api.get('category')
         .then(response => {
           this.categories = response.data.map(category => ({
             ...category,
@@ -72,7 +72,7 @@ export default {
     },
     createCategory() {
       if (this.newCategoryName.trim()) {
-        api.post('Category/Create', { name: this.newCategoryName }) // Chamada para a API de criação
+        api.post('category', { name: this.newCategoryName }) // Chamada para a API de criação
           .then(response => {
             this.categories.push({
               id: response.data.id,
@@ -93,7 +93,7 @@ export default {
       category.isEditing = true;
     },
     saveCategory(category) {
-      api.put(`Category/Edit/${category.id}`, { name: category.name })
+      api.put(`category/${category.id}`, { name: category.name })
         .then(() => {
           category.isEditing = false;
         })

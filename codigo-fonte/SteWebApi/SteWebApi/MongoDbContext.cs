@@ -11,6 +11,7 @@ public class MongoDbContext
     public IMongoCollection<Item> Items => _database.GetCollection<Item>("Items");
     public IMongoCollection<LendingManagerDto> ItemLending => _database.GetCollection<LendingManagerDto>("ItemLending");
     public IMongoCollection<ItemTransactionHistory> HistoryLendItems => _database.GetCollection<ItemTransactionHistory>("HistoryLendItems");
+    public IMongoCollection<Log> Logs => _database.GetCollection<Log>("Logs");
     
     
     public MongoDbContext(IConfiguration configuration)

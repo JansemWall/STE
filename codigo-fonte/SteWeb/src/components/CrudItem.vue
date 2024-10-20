@@ -71,7 +71,7 @@ export default {
   methods: {
     fetchItems() {
       this.loading = true;
-      api.get('Item/GetAll')
+      api.get('Item')
         .then(response => {
           this.items = response.data.map(item => ({
             ...item,
@@ -85,7 +85,7 @@ export default {
         });
     },
     fetchCategories() {
-      api.get('Category/GetAll')
+      api.get('category')
         .then(response => {
           this.categories = response.data;
         })
@@ -100,7 +100,7 @@ export default {
           code: this.newItemCode,
           categoryId: this.newItemCategory,
         };
-        api.post('Item/Create', newItem)
+        api.post('item', newItem)
           .then(response => {
             this.items.push({
               id: response.data.id,
@@ -130,7 +130,7 @@ export default {
         code: item.code,
         categoryId: item.categoryId,
       };
-      api.put(`Item/Edit/${item.id}`, updatedItem)
+      api.put(`item/${item.id}`, updatedItem)
         .then(() => {
           item.isEditing = false;
         })
@@ -143,7 +143,7 @@ export default {
     },
     deleteItem(itemId) {
       if (confirm('Tem certeza que deseja deletar este item?')) {
-        api.delete(`Item/Delete/${itemId}`)
+        api.delete(`item/${itemId}`)
           .then(() => {
             this.items = this.items.filter(item => item.id !== itemId);
           })

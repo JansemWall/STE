@@ -67,7 +67,7 @@ export default {
     methods: {
         fetchPendingItems() {
             this.loading = true; // Define o loading como verdadeiro ao buscar os itens
-            api.get('LendingManager/History')
+            api.get('lendingmanager/history')
                 .then(response => {
                     this.items = response.data.filter(item => !item.dateReturn);
                 })
@@ -82,7 +82,7 @@ export default {
             this.error = false;
             this.success = false;
 
-            api.post(`LendingManager/Return/${id}`)
+            api.post(`lendingmanager/return/${id}`)
                 .then(() => {
                     this.success = true;
                     toast.success('Item devolvido com sucesso!');

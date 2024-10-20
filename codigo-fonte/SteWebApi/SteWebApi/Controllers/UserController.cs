@@ -9,7 +9,7 @@ using SteWebApi.Services;
 
 namespace SteWebApi.Controllers;
 
-    [Route("api/[controller]")]
+    [Route("api/user")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -34,7 +34,7 @@ namespace SteWebApi.Controllers;
         }
         
         [Authorize]
-        [HttpPost("Create")]
+        [HttpPost()]
         public async Task<ActionResult> Create([FromBody]UserDto model)
         {
 
@@ -49,7 +49,7 @@ namespace SteWebApi.Controllers;
         }
         
         [Authorize]
-        [HttpPut("Edit/{id}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> UpdateItemName(string id, [FromBody] UserDto newUser)
         {
             var user = await _MongoDbContext.Users.Find(i => i.Id == id).FirstOrDefaultAsync();
@@ -70,7 +70,7 @@ namespace SteWebApi.Controllers;
         }
         
         [Authorize]
-        [HttpDelete("Delete/{id}")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(string id)
         {
             var user = await _MongoDbContext.Users.FindOneAndDeleteAsync(x => x.Id == id);
@@ -80,7 +80,7 @@ namespace SteWebApi.Controllers;
         }
 
         [AllowAnonymous]
-        [HttpGet("GetAllUsers")]
+        [HttpGet()]
         public async Task<ActionResult> GetAll()
         {
             var model = await _MongoDbContext.Users.Find(_ => true).ToListAsync();

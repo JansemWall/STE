@@ -83,7 +83,7 @@ export default {
             this.fetchItemsByCategory(categoryId); // Busca itens da categoria selecionada
         },
         fetchCategories() {
-            api.get('Category/GetAll')
+            api.get('category')
                 .then(response => {
                     // Filtra categorias que têm itens disponíveis para empréstimo
                     this.categories = response.data.filter(category =>
@@ -98,7 +98,7 @@ export default {
                 });
         },
         fetchItemsByCategory(categoryId) {
-            api.get(`Category/Get/${categoryId}`)
+            api.get(`category/${categoryId}`)
                 .then(response => {
                     // Filtra os itens que têm `isLend`, indicando que não estão emprestados
                     this.categories = response.data.items.filter(category => !category.isLend);
@@ -123,7 +123,7 @@ export default {
             };
 
             // Faz a requisição para emprestar o item selecionado
-            api.post(`LendingManager/Lend/${this.selectItemId}`, requestData, {
+            api.post(`lendingManager/lend/${this.selectItemId}`, requestData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

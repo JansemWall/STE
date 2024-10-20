@@ -19,9 +19,36 @@ Uma aplicação que permite o gerenciamento de empréstimo de itens. Estes itens
 | :---: |
 
 ## Instruções de utilização
+Com o node.js previamente instalado, siga os passos abaixo para rodar a aplicação localmente.
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+### Executando o front-end localmente:
+Abra um terminal em uma pasta que deseja salvar o projeto.
 
+#### Clone o projeto
+cole o comando:
+```
+git clone https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e5-proj-empext-t5-pmv-ads-2024-2-e5-ste.git
+```
+
+Em seguida navegue até a pasta do código do front-end:
+```
+cd 'pmv-ads-2024-2-e5-proj-empext-t5-pmv-ads-2024-2-e5-ste/codigo-fonte/SteWeb/'
+```
+
+Instale as dependencias.
+```
+npm install
+```
+
+Execute o projeto.
+```
+npm run build
+```
+Através destes passos você será capaz de utilizar a aplicação normalmente.
+
+Logue com as credenciais:
+- Usuario: Usuario
+- Senha: 12345678
 # Documentação
 
 <ol>

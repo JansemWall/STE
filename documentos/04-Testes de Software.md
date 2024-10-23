@@ -899,12 +899,12 @@ A seguir, apresentamos um **Plano de Teste Unitário** para as funcionalidades d
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|A aplicação deve permitir empréstimo.|<ol><li>Fazer o login</li><li> Selecionar o item para ser emprestado. </li><li>Efetuar o empréstimo do item.</li></ol> | A aplicação deve permitir o empréstimo dos equipamentos de informática.
+|A aplicação deve permitir empréstimo.|<ol><li>Fazer o login</li><li> Selecionar o item para ser emprestado. </li><li>Efetuar o empréstimo do item.</li></ol> | A aplicação deve permitir o empréstimo dos equipamentos de informática.|
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-01 - RF-01 | A aplicação deve permitir o empréstimo e devolução de equipamentos de informática. | | |
+| CT-01 - RF-01 | A aplicação deve permitir o empréstimo e devolução de equipamentos de informática. | --- | --- |
 | | | |
 
 ---
@@ -915,12 +915,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|A aplicação deve permitir devolução de equipamentos.|<ol><li>Fazer o login</li><li> Selecionar o item para ser emprestado. </li><li>Efetuar a devolução do item.</li></ol> | A aplicação deve permitir a devolução dos equipamentos de informática.
+|A aplicação deve permitir devolução de equipamentos.|<ol><li>Fazer o login</li><li> Selecionar o item para ser emprestado. </li><li>Efetuar a devolução do item.</li></ol> | A aplicação deve permitir a devolução dos equipamentos de informática.|
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-02 - RF-01 | A aplicação deve permitir o empréstimo e devolução de equipamentos de informática. | | |
+| CT-02 - RF-01 | A aplicação deve permitir o empréstimo e devolução de equipamentos de informática. | --- | --- |
 | | | |
 
 ---
@@ -931,12 +931,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|A aplicação deve permitir criar categoria.|<ol><li>Fazer o login</li><li> Acessar o perfil de administrador </li><li>Criar categoria.</li></ol> | A aplicação deve permitir a criação, edição e exclusão de categorias de itens.
+|A aplicação deve permitir criar categoria.|<ol><li>Fazer o login</li><li> Acessar o perfil de administrador </li><li>Acessar Categorias</li><li>Criar categoria.</li></ol> | A aplicação deve permitir a criação, edição e exclusão de categorias de itens.|
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-03 - RF-03 | A aplicação deve possuir CRUD de Categoria de Itens. | | |
+| CT-03 - RF-03 | A aplicação deve possuir CRUD de Categoria de Itens. | --- | --- |
 | | | |
 
 ---
@@ -947,12 +947,12 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|A aplicação deve permitir editar categoria.|<ol><li>Fazer o login</li><li> Acessar o perfil de administrador </li><li>Criar categoria.</li></ol> | A aplicação deve permitir a criação, edição e exclusão de categorias de itens.
+|A aplicação deve permitir editar categoria.|<ol><li>Fazer o login</li><li> Acessar o perfil de administrador </li><li>Acessar Categorias</li><li>Criar categoria.</li></ol> | A aplicação deve permitir a criação, edição e exclusão de categorias de itens.|
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-04 - RF-03 | A aplicação deve possuir CRUD de Categoria de Itens. | | |
+| CT-04 - RF-03 | A aplicação deve possuir CRUD de Categoria de Itens. | --- | --- |
 | | | |
 
 ---
@@ -963,12 +963,95 @@ Registro:
 
 |Objetivo do teste| Passos | Critérios de êxito|
 |-|-|-|
-|A aplicação deve permitir excluir categoria.|<ol><li>Fazer o login</li><li> Acessar o perfil de administrador </li><li>Criar categoria.</li></ol> | A aplicação deve permitir a criação, edição e exclusão de categorias de itens.
+|A aplicação deve permitir excluir categoria.|<ol><li>Fazer o login</li><li> Acessar o perfil de administrador </li><li>Acessar Categorias</li><li>Criar categoria.</li></ol> | A aplicação deve permitir a criação, edição e exclusão de categorias de itens.|
 
 Registro:
 | **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
 |:---: |:---: |:---: |:---: |
-| CT-05 - RF-03 | A aplicação deve possuir CRUD de Categoria de Itens. | | |
+| CT-05 - RF-03 | A aplicação deve possuir CRUD de Categoria de Itens. | --- | --- |
 | | | |
 
 ---
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-06 - A aplicação deve permitir a criação de item |RF-04 – A aplicação deve possuir CRUD de Itens|
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|A aplicação deve permitir criar item.|<ol><li>Fazer o login</li><li> Acessar o perfil de administrador </li><li>Acessar itens</li><li>Criar item.</li></ol> | A aplicação deve permitir a criação, edição e exclusão de categorias de itens.|
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-06 - RF-04 | A aplicação deve possuir CRUD de Itens | --- | --- |
+| | | |
+
+---
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-07 - A aplicação deve permitir a Edição de item |RF-04 – A aplicação deve possuir CRUD de Itens|
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|A aplicação deve permitir editar item.|<ol><li>Fazer o login</li><li> Acessar o perfil de administrador </li><li>Acessar itens</li><li>Criar item.</li></ol> | A aplicação deve permitir a criação, edição e exclusão de categorias de itens.|
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-07 - RF-04 | A aplicação deve possuir CRUD de Itens | --- | --- |
+| | | |
+
+---
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-08 - A aplicação deve permitir a Exclusão de item |RF-04 – A aplicação deve possuir CRUD de Itens|
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|A aplicação deve permitir excluir item.|<ol><li>Fazer o login</li><li> Acessar o perfil de administrador </li><li>Acessar itens</li><li>Criar item.</li></ol> | A aplicação deve permitir a criação, edição e exclusão de categorias de itens.|
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-08 - RF-04 | A aplicação deve possuir CRUD de Itens | --- | --- |
+| | | |
+
+---
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-09 - A aplicação deve apresentar o codigo de usuário e nome do tomador do empréstimo |RF-05 – A aplicação deve apresentar qual o código do usuário e nome tomador|
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|A aplicação deve apresentar o codigo de usuário e nome do tomador do empréstimo.|<ol><li>Fazer o login</li><li>Acessar a tela de empréstimos</li><li>Efetuar o empréstimo de um item</li><li>Acessar o historico</li><li>Verificar se é apresentado o codigo de pessoa e nome do tomador. </li></ol> | A aplicação deve apresentar qual o código do usuário e nome tomador.|
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-09 - RF-05 | A aplicação deve apresentar qual o código do usuário e nome tomador | --- | --- |
+| | | |
+
+---
+
+| **Caso de teste** | **Requisitos Associados**|
+|--|--|
+|CT-10 - A aplicação deve apresentar o codigo de usuário e nome do tomador do empréstimo |RF-06 – A aplicação deve registrar e apresentar a data e hora do emprestimo e devolução|
+
+|Objetivo do teste| Passos | Critérios de êxito|
+|-|-|-|
+|A aplicação deve registrar e apresentar a data e hora do emprestimo e devolução|<ol><li>Fazer o login</li><li>Acessar a tela de empréstimos ou devolução</li><li>Efetuar o empréstimo/devolução de um item</li><li>Acessar o historico</li><li>Verificar se é apresentado data e hora do empréstimo ou devolução. </li></ol> | A aplicação deve registrar e apresentar a data e hora do emprestimo e devolução|
+
+Registro:
+| **ID** | **Descrição do teste** | **Descrição do resultado** | **Gravidade** |
+|:---: |:---: |:---: |:---: |
+| CT-10 - RF-06 | A aplicação deve registrar e apresentar a data e hora do emprestimo e devolução |--- |--- |
+| | | |
+
+---
+
+
+

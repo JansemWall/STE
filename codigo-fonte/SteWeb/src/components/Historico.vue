@@ -48,7 +48,7 @@
             </table>
 
             <!-- Controles de Paginação -->
-            <div class="mt-4 flex justify-center items-center">
+            <div v-if="paginatedData.length > 1" class="mt-4 flex justify-center items-center">
                 <button @click="prevPage" :disabled="currentPage === 1" class="bg-gray-500 text-black px-4 py-2 rounded ml-2">
                     Anterior
                 </button>

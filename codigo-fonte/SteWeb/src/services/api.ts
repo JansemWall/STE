@@ -2,7 +2,7 @@ import axios from 'axios';
 import { getAccessToken} from './auth';
 
 const api = axios.create({
-    baseURL: 'https://steapi-a0eme3ddf0auezbn.brazilsouth-01.azurewebsites.net/api/',
+    baseURL: 'https://ste-api.azurewebsites.net/api/',
 });
 
 api.interceptors.request.use(

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-const API_URL = 'https://steapi-a0eme3ddf0auezbn.brazilsouth-01.azurewebsites.net/api/';
+const API_URL = 'https://ste-api.azurewebsites.net/api/';
 
 export function decodeToken(token) {
     const payload = token.split('.')[1];

@@ -22,7 +22,5 @@ import BreadCrumbs from '@/components/comps/BreadCrumbs.vue';
     /* Ajuste a altura mínima (substitua 160px pela altura do Navbar e Footer se necessário) */
     min-width: max-content;
 }
-.children{
-    margin:2%
-}
+
 </style>

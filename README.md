@@ -1,7 +1,7 @@
 # STE
 `Análise e Desenvolvimento de Sistemas`
 
-`Projeto: Desenvolvimento de uma aplicação distribuída`
+`Projeto: Desenvolvimento de um Sistema Sociotécnico Inovador`
 
 `Eixo 5`
 # Sobre

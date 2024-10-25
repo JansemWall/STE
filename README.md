@@ -48,8 +48,10 @@ npm run build
 Através destes passos você será capaz de utilizar a aplicação normalmente.
 
 Logue com as credenciais:
+```
 - Usuario: Usuario
 - Senha: 12345678
+```
 # Documentação
 
 <ol>

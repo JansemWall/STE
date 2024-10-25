@@ -44,6 +44,7 @@ Execute o projeto.
 ```
 npm run build
 ```
+
 Através destes passos você será capaz de utilizar a aplicação normalmente.
 
 Logue com as credenciais:

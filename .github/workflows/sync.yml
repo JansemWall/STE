@@ -23,4 +23,6 @@ jobs:
           git config --global user.name "JansemWall"
           git config --global user.email "jansemwall@gmail.com"
           git remote add target-repo git@github.com:JansemWall/STE.git
+          git add .
+          git commit -m 'auto deplo'
           git push target-repo main --force
